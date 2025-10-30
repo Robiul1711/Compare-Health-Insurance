@@ -1,0 +1,64 @@
+import comparison from "../../assets/images/comparison.png";
+export default function TrustedProviders() {
+  return (
+
+      <div className="flex overflow-hidden rounded-lg">
+        {/* Left Section */}
+        <div className="flex w-full  md:w-1/2">
+          <div>
+            <h2 className="mb-4 text-5xl font-bold text-gray-900">
+    Trusted Providers
+            </h2>
+            <p className="text-Secondary font-semibold text-xl">
+            We work with leading insurance companies you can trust.
+            </p>
+          </div>
+        </div>
+
+        {/* Right Section */}
+        <div className=" w-full md:w-1/2">
+          <div className="relative ">
+        {/* Image Container */}
+        <div className="relative h-98 flex items-center justify-center p-8">
+          {/* Handshake Image Placeholder */}
+          <div className="relative w-full h-full flex items-center justify-center">
+            <img 
+              src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=800&q=80" 
+              alt="Handshake representing care" 
+              className="w-full h-full object-cover rounded-2xl"
+            />
+          </div>
+          
+          {/* Confidentiality Badge */}
+          <div className="absolute top-12 left-10 bg-white rounded-full px-6 py-2 shadow-lg">
+            <span className="text-gray-800 text-sm font-medium">Confidentiality</span>
+          </div>
+          
+          {/* Accessibility Badge */}
+          <div className="absolute bottom-12 right-10 bg-white rounded-full px-6 py-2 shadow-lg">
+            <span className="text-gray-800 text-sm font-medium">Accessibility</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Section */}
+      <div className="flex items-center gap-4">
+        {/* Hashtag Section */}
+        <div className="flex-1 bg-blue-100 rounded-3xl px-6 py-10">
+          <h2 className="text-2xl font-bold text-gray-800">#LetsStayHealthy</h2>
+        </div>
+
+        {/* Discount Badge */}
+        <div className="bg-blue-500 rounded-3xl px-8 py-6 shadow-lg">
+          <div className="text-center">
+            <p className="text-4xl font-bold text-white">50%</p>
+            <p className="text-white text-sm font-medium">Discount</p>
+          </div>
+        </div>
+      </div>
+
+        </div>
+      </div>
+
+  );
+}
