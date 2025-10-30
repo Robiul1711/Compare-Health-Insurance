@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
 
@@ -9,12 +9,13 @@
 
 @theme {
   /* font */
-  --font-roboto: "Roboto", sans-serif;;
+  --font-roboto: "Roboto", sans-serif;
   --font-roboto:  "Geist", sans-serif;
 
   /* color */
 
-  --color-primary: green;
+  --color-Primary: #478EFF;
+  --color-Secondary: #64748B;
   --color-bg-custom: linear-gradient(red, yellow);
 
   /* breakpoint */
