@@ -1,0 +1,41 @@
+import ContactUs from "@/components/common/ContactUs";
+import React from "react";
+import bgBanner from "../../assets/images/bgBanner.png";
+import Title from "@/components/common/Title";
+import { MdVerifiedUser } from "react-icons/md";
+const PrivacyPolicy = () => {
+  return (
+    <div>
+      <div
+        className="h-screen bg-cover bg-center bg-no-repeat flex flex-col gap-14 items-center justify-between"
+        style={{
+          backgroundImage: `linear-gradient(180deg, #0A2043 10%, rgba(44, 46, 59, 0.00) 100%), url(${bgBanner})`,
+        }}
+      >
+        {/* Content */}
+        <div className="text-white flex flex-col items-center justify-center max-w-[750px] mx-auto text-center">
+          <span className="flex items-center justify-center size-16 bg-Primary text-white rounded-2xl">
+            <MdVerifiedUser className="text-3xl" />
+          </span>
+          <Title level="title48" className="py-4">
+            Privacy Policy
+          </Title>
+          <Title level="title24">Last updated: 26/10/25</Title>
+          <Title level="title24">
+            CompareSure respects your privacy and is committed to protecting
+            your personal information. This policy explains how we collect, use,
+            store, and share your information when you use our website or
+            services.
+          </Title>
+        </div>
+
+        <div className="w-full ">
+
+        <ContactUs />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PrivacyPolicy;

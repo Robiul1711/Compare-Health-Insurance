@@ -33,7 +33,7 @@ const Banner = () => {
           Call Now
         </CommonButton>
 
-        <CommonButton variant="secondary" className="">
+        <CommonButton link={'/compare-health-insurance'} variant="secondary" className="">
           Get Your Free Comparison
         </CommonButton>
       </div>

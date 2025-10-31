@@ -9,12 +9,13 @@ import {
   Twitter,
   Youtube,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const navLinks = [
-  { name: "Home", href: "/#home" },
-  { name: "Collection", href: "/#work" },
-  { name: "About", href: "/#about" },
-  { name: "Quality", href: "/#service" },
+  { name: "Home", href: "/" },
+  { name: "About us", href: "/about" },
+  { name: "FAQs", href: "/faqs" },
+  { name: "Contact us", href: "/contacts" },
 ];
 
 const Footer = ({ data }) => {
@@ -23,11 +24,7 @@ const Footer = ({ data }) => {
       <div className="flex flex-col md:flex-row justify-between w-full gap-10">
         {/* Logo and Description */}
         <div className="md:max-w-[50%] lg:max-w-[40%]">
-          <img
-            src={logo}
-            alt="Company Logo"
-            className=" w-auto mb-5"
-          />
+          <img src={logo} alt="Company Logo" className=" w-auto mb-5" />
           <p className=" leading-relaxed">
             Experience the next level of digital excellence. Our products and
             services are crafted to enhance your daily life and empower your
@@ -35,47 +32,42 @@ const Footer = ({ data }) => {
             support — we’re here to make it simple, secure, and smart.
           </p>
 
-          <p className="font-semibold text-lg  mt-8 mb-3">
-            Follow us
-          </p>
+          <p className="font-semibold text-lg  mt-8 mb-3">Follow us</p>
           <div className="flex space-x-4">
-           
-              <a
-                href={data?.social_links?.facebook_link}
-                className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
-              >
-                <Facebook className="size-5 md:size-6 text-Primary" />
-              </a>
-         
-       
-              <a
-                href={data?.social_links?.instagram_link}
-                className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
-              >
-                <Instagram className="size-5 md:size-6 text-Primary" />
-              </a>
-      
-              <a
-                href={data?.social_links?.linkedin_link}
-                className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
-              >
-                <Linkedin className="size-5 md:size-6 text-Primary" />
-              </a>
-       
-              <a
-                href={data?.social_links?.youtube_link}
-                className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
-              >
-                <Youtube className="size-5 md:size-6 text-Primary" />
-              </a>
-     
-              <a
-                href={data?.social_links?.twitter_link}
-                className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
-              >
-                <Twitter className="size-5 md:size-6 text-Primary" />
-              </a>
-    
+            <a
+              href={data?.social_links?.facebook_link}
+              className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
+            >
+              <Facebook className="size-5 md:size-6 text-Primary" />
+            </a>
+
+            <a
+              href={data?.social_links?.instagram_link}
+              className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
+            >
+              <Instagram className="size-5 md:size-6 text-Primary" />
+            </a>
+
+            <a
+              href={data?.social_links?.linkedin_link}
+              className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
+            >
+              <Linkedin className="size-5 md:size-6 text-Primary" />
+            </a>
+
+            <a
+              href={data?.social_links?.youtube_link}
+              className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
+            >
+              <Youtube className="size-5 md:size-6 text-Primary" />
+            </a>
+
+            <a
+              href={data?.social_links?.twitter_link}
+              className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
+            >
+              <Twitter className="size-5 md:size-6 text-Primary" />
+            </a>
           </div>
         </div>
 
@@ -87,35 +79,57 @@ const Footer = ({ data }) => {
               <h2 className="text-base md:text-lg font-semibold border-b border-gray-700 pb-2 mb-3">
                 Quick Links
               </h2>
-              <ul className="space-y-3  text-sm md:text-base">
-                {navLinks.map((link) => (
-                  <li
-                    key={link.href}
-                    className="relative cursor-pointer  transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-white after:transition-all after:duration-300"
-                  >
-                    {link.name}
-                  </li>
-                ))}
-              </ul>
+       <ul className="space-y-3 text-sm md:text-base">
+  {navLinks.map((link) => (
+    <li key={link.name}>
+      <Link
+        to={link.href}
+        className="relative cursor-pointer transition-colors duration-200
+                   after:content-[''] after:absolute after:left-0 after:bottom-0 
+                   after:w-0 hover:after:w-full after:h-[2px] after:bg-white 
+                   after:transition-all after:duration-300"
+      >
+        {link.name}
+      </Link>
+    </li>
+  ))}
+</ul>
+
             </div>
 
             {/* Customer Service */}
             <div>
               <h2 className="text-base md:text-lg font-semibold border-b border-gray-700 pb-2 mb-3">
-               Legal
+                Legal
               </h2>
-              <ul className="space-y-3  text-sm md:text-base">
-                <li className=" cursor-pointer transition-colors">
-                  Shipping Policy
+              <ul className="space-y-3 text-sm md:text-base">
+                <li>
+                  <Link
+                    to="/privacy-policy"
+                    className="cursor-pointer transition-colors"
+                  >
+                    Privacy Policy
+                  </Link>
                 </li>
-                <li className=" cursor-pointer transition-colors">
-                  Return Policy
+                <li>
+                  <Link className="cursor-pointer transition-colors">
+                    Terms of Service
+                  </Link>
                 </li>
-                <li className=" cursor-pointer transition-colors">
-                  Support Center
+                <li>
+                  <Link className="cursor-pointer transition-colors">
+                    Disclaimer
+                  </Link>
                 </li>
-                <li className=" cursor-pointer transition-colors">
-                  FAQs
+                <li>
+                  <Link className="cursor-pointer transition-colors">
+                    Compliance
+                  </Link>
+                </li>
+                <li>
+                  <Link className="cursor-pointer transition-colors">
+                    Code of Conduct
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -128,7 +142,9 @@ const Footer = ({ data }) => {
               <ul className="space-y-3  text-sm md:text-base">
                 <li className="flex items-center gap-2 ">
                   <Mail className="size-4" />
-                  <span>{data?.system_settings?.email || "info@upgrade.com"}</span>
+                  <span>
+                    {data?.system_settings?.email || "info@upgrade.com"}
+                  </span>
                 </li>
                 {data?.system_settings?.phone1 && (
                   <li className="flex items-center gap-2 ">
