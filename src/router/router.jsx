@@ -2,11 +2,15 @@ import Dashboard from "@/components/admin/Dashboard";
 import AdminLayout from "@/layout/AdminLayout";
 import Layout from "@/layout/Layout";
 import AboutPage from "@/pages/AboutPage/AboutPage";
+import CodeOfConductPage from "@/pages/CodeOfConductPage/CodeOfConductPage";
 import CompareHealthInsurance from "@/pages/ComparePage/CompareHealthInsurance";
+import Compliance from "@/pages/CompliancePage/Compliance";
 import ContactPage from "@/pages/ContactPage/ContactPage";
+import Disclaimer from "@/pages/Disclaimer/Disclaimer";
 import FaqPage from "@/pages/FaqPage/FaqPage";
 import Home from "@/pages/home/Home";
 import PrivacyPolicy from "@/pages/PrivacyPolicy/PrivacyPolicy";
+import TermsOfService from "@/pages/TermsOfService/TermsOfService";
 
 
 import { createBrowserRouter } from "react-router-dom";
@@ -39,6 +43,22 @@ const router = createBrowserRouter([
       {
         path: "/privacy-policy",
         element: <PrivacyPolicy />,
+      },
+      {
+        path: "/terms-of-service",
+        element: <TermsOfService />,
+      },
+      {
+        path: "/disclaimer",
+        element: <Disclaimer />,
+      },
+      {
+        path: "/compliance",
+        element: <Compliance />,
+      },
+      {
+        path: "/code-of-conduct",
+        element: <CodeOfConductPage />,
       },
 
     ],

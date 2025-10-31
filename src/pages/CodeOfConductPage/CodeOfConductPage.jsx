@@ -2,10 +2,11 @@ import ContactUs from "@/components/common/ContactUs";
 import React from "react";
 import bgBanner from "../../assets/images/bgBanner.png";
 import Title from "@/components/common/Title";
-import { MdVerifiedUser } from "react-icons/md";
-import PrivacyInfoSection from "./PrivacyInfoSection";
 
-const PrivacyPolicy = () => {
+import { MdVerifiedUser } from "react-icons/md";
+import CodeOfConductSection from "./CodeOfConductSection";
+
+const CodeOfConductPage = () => {
   return (
     <div>
       <div
@@ -21,21 +22,21 @@ const PrivacyPolicy = () => {
               <MdVerifiedUser className="text-3xl" />
             </span>
             <Title level="title48" className="py-4">
-              Privacy Policy
+              Code of Conduct
             </Title>
             <Title level="title20">Last updated: 26/10/25</Title>
             <Title level="title20" className="py-4">
-              CompareSure respects your privacy and is committed to protecting
-              your personal information. This policy explains how we collect, use,
-              store, and share your information when you use our website or
-              services.
+              At CompareSure, we proudly support and follow the Private Health
+              Insurance Code of Conduct. <br /> This Code helps ensure that
+              customers receive honest, respectful, and transparent service when
+              comparing health insurance options.
             </Title>
           </div>
         </div>
 
         {/* Bottom Sections */}
         <div className="w-full flex flex-col gap-20">
-          <PrivacyInfoSection />
+          <CodeOfConductSection />
           <ContactUs />
         </div>
       </div>
@@ -43,4 +44,4 @@ const PrivacyPolicy = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default CodeOfConductPage;

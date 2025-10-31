@@ -41,7 +41,7 @@ const RigntHealthInsurance = () => {
           className="flex flex-wrap items-center justify-center gap-3 text-balance"
         >
           A Simple Process
-          <span className="flex items-center justify-center size-10 bg-Primary text-white rounded-2xl">
+          <span className="flex items-center justify-center size-10 bg-Primary/20 text-white rounded-2xl">
             <ProgressIcon />
           </span>
           to Find the Right Health Insurance

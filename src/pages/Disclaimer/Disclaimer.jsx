@@ -3,9 +3,11 @@ import React from "react";
 import bgBanner from "../../assets/images/bgBanner.png";
 import Title from "@/components/common/Title";
 import { MdVerifiedUser } from "react-icons/md";
-import PrivacyInfoSection from "./PrivacyInfoSection";
+import { DisclaimerIcon } from "@/components/Icon";
+import DisclaimerSection from "./DisclaimerSection";
 
-const PrivacyPolicy = () => {
+
+const Disclaimer = () => {
   return (
     <div>
       <div
@@ -18,24 +20,19 @@ const PrivacyPolicy = () => {
         <div className="flex-1 flex flex-col items-center justify-center px-4 py-8">
           <div className="text-white flex flex-col items-center justify-center max-w-[750px] mx-auto text-center">
             <span className="flex items-center justify-center size-16 bg-Primary text-white rounded-2xl">
-              <MdVerifiedUser className="text-3xl" />
+              <DisclaimerIcon />
             </span>
             <Title level="title48" className="py-4">
-              Privacy Policy
+          Disclaimer
             </Title>
             <Title level="title20">Last updated: 26/10/25</Title>
-            <Title level="title20" className="py-4">
-              CompareSure respects your privacy and is committed to protecting
-              your personal information. This policy explains how we collect, use,
-              store, and share your information when you use our website or
-              services.
-            </Title>
+
           </div>
         </div>
 
         {/* Bottom Sections */}
         <div className="w-full flex flex-col gap-20">
-          <PrivacyInfoSection />
+    <DisclaimerSection />
           <ContactUs />
         </div>
       </div>
@@ -43,4 +40,4 @@ const PrivacyPolicy = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default Disclaimer;
