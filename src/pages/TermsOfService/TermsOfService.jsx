@@ -3,9 +3,12 @@ import React from "react";
 import bgBanner from "../../assets/images/bgBanner.png";
 import Title from "@/components/common/Title";
 import { MdVerifiedUser } from "react-icons/md";
-import PrivacyInfoSection from "./PrivacyInfoSection";
 
-const PrivacyPolicy = () => {
+import TermsServiceSection from "./TermsServiceSection";
+import { TermsIcon } from "@/components/Icon";
+
+
+const TermsOfService = () => {
   return (
     <div>
       <div
@@ -18,24 +21,21 @@ const PrivacyPolicy = () => {
         <div className="flex-1 flex flex-col items-center justify-center px-4 py-8">
           <div className="text-white flex flex-col items-center justify-center max-w-[750px] mx-auto text-center">
             <span className="flex items-center justify-center size-16 bg-Primary text-white rounded-2xl">
-              <MdVerifiedUser className="text-3xl" />
+             <TermsIcon />
             </span>
             <Title level="title48" className="py-4">
-              Privacy Policy
+             Terms of Service
             </Title>
             <Title level="title20">Last updated: 26/10/25</Title>
             <Title level="title20" className="py-4">
-              CompareSure respects your privacy and is committed to protecting
-              your personal information. This policy explains how we collect, use,
-              store, and share your information when you use our website or
-              services.
+            CompareSure is an independent online platform that helps users compare health insurance options from a range of providers. We provide tools and information to help you make informed decisions.
             </Title>
           </div>
         </div>
 
         {/* Bottom Sections */}
         <div className="w-full flex flex-col gap-20">
-          <PrivacyInfoSection />
+          <TermsServiceSection />
           <ContactUs />
         </div>
       </div>
@@ -43,4 +43,4 @@ const PrivacyPolicy = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default TermsOfService;

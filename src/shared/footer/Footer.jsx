@@ -4,11 +4,13 @@ import {
   Facebook,
   Instagram,
   Linkedin,
+  LocationEdit,
   Mail,
   Phone,
   Twitter,
   Youtube,
 } from "lucide-react";
+import { CiLocationOn } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
 const navLinks = [
@@ -79,22 +81,21 @@ const Footer = ({ data }) => {
               <h2 className="text-base md:text-lg font-semibold border-b border-gray-700 pb-2 mb-3">
                 Quick Links
               </h2>
-       <ul className="space-y-3 text-sm md:text-base">
-  {navLinks.map((link) => (
-    <li key={link.name}>
-      <Link
-        to={link.href}
-        className="relative cursor-pointer transition-colors duration-200
+              <ul className="space-y-3 text-sm md:text-base">
+                {navLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
+                      className="relative cursor-pointer transition-colors duration-200
                    after:content-[''] after:absolute after:left-0 after:bottom-0 
                    after:w-0 hover:after:w-full after:h-[2px] after:bg-white 
                    after:transition-all after:duration-300"
-      >
-        {link.name}
-      </Link>
-    </li>
-  ))}
-</ul>
-
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* Customer Service */}
@@ -112,23 +113,51 @@ const Footer = ({ data }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="cursor-pointer transition-colors">
+                  <Link
+                    to="/terms-of-service"
+                    className="cursor-pointer transition-colors"
+                  >
                     Terms of Service
                   </Link>
                 </li>
                 <li>
-                  <Link className="cursor-pointer transition-colors">
+                  <Link
+                    to="/disclaimer"
+                    className="cursor-pointer transition-colors"
+                  >
                     Disclaimer
                   </Link>
                 </li>
                 <li>
-                  <Link className="cursor-pointer transition-colors">
+                  <Link
+                    to="/compliance"
+                    className="cursor-pointer transition-colors"
+                  >
                     Compliance
                   </Link>
                 </li>
                 <li>
-                  <Link className="cursor-pointer transition-colors">
+                  <Link
+                    to="/code-of-conduct"
+                    className="cursor-pointer transition-colors"
+                  >
                     Code of Conduct
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/dispute-resolutions"
+                    className="cursor-pointer transition-colors"
+                  >
+                    Dispute resolutions policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/fiduciary-duty"
+                    className="cursor-pointer transition-colors"
+                  >
+                    Fiduciary duty policy
                   </Link>
                 </li>
               </ul>
@@ -140,27 +169,24 @@ const Footer = ({ data }) => {
                 Contact
               </h2>
               <ul className="space-y-3  text-sm md:text-base">
-                <li className="flex items-center gap-2 ">
-                  <Mail className="size-4" />
+                <li className="flex items-center gap-1 ">
+                  <Mail className="size-6" />
                   <span>
-                    {data?.system_settings?.email || "info@upgrade.com"}
+                    {data?.system_settings?.email || "info@healthcompare.com"}
                   </span>
                 </li>
-                {data?.system_settings?.phone1 && (
+            
                   <li className="flex items-center gap-2 ">
                     <Phone className="size-4" />
-                    <span>{data?.system_settings?.phone1}</span>
+                    <span>{ "(123) 456-7890"}</span>
                   </li>
-                )}
-                {data?.system_settings?.phone2 && (
-                  <li className="flex items-center gap-2 ">
-                    <Phone className="size-4" />
-                    <span>{data?.system_settings?.phone2}</span>
-                  </li>
-                )}
-                <li className="">
+         
+             
+             
+                <li className="flex items-center gap-2">
+                  <CiLocationOn className="size-7" />
                   {data?.system_settings?.address ||
-                    "123 Business Avenue, Dhaka, Bangladesh"}
+                    "123 Insurance Street, London, UK"}
                 </li>
               </ul>
             </div>
@@ -170,10 +196,8 @@ const Footer = ({ data }) => {
 
       {/* Copyright */}
       <div className="flex flex-col sm:flex-row justify-between items-center border-t border-gray-700 mt-10 pt-5  text-sm">
-        <p>© 2025 Upgrade.com — All rights reserved.</p>
-        <p className=" cursor-pointer transition-colors">
-          Terms & Conditions | Privacy Policy
-        </p>
+        <p>© 2025 HealthCompare. All rights reserved.</p>
+        <p className=" cursor-pointer transition-colors">Trustpilot Reviews</p>
       </div>
     </footer>
   );

@@ -201,6 +201,10 @@
 }
 
 @media screen and (min-width: 650px) {
+  .ant-steps-item-title {
+   
+    font-weight: 600 !important;
+  }
   .section-padding-x {
     padding-left: 20px;
     padding-right: 20px;
