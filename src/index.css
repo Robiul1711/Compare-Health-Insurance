@@ -16,7 +16,9 @@
 
   --color-Primary: #478EFF;
   --color-Secondary: #64748B;
-  --color-bg-custom: linear-gradient(red, yellow);
+  --color-bg-custom: radial-gradient(50% 59% at 50% 50%, #A3C0FF 0%, rgba(163, 192, 255, 0.00) 100%);
+
+
 
   /* breakpoint */
   --breakpoint-xxs: 390px;
@@ -32,7 +34,7 @@
 
   /* shadow */
 
-  --shadow-custom: 0px 4px 16.2px 2px rgba(0, 0, 0, 0.2);
+  --shadow-custom:  0 4px 19.5px 0 rgba(27, 101, 218, 0.12);
 
   /* radius */
   --radius: 0.5rem;

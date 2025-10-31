@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "@/assets/images/logo.png";
 import CommonButton from "@/components/common/CommonButton";
 import { IoCallOutline } from "react-icons/io5";
@@ -34,9 +34,9 @@ const Navbar = () => {
         section-padding-x flex items-center justify-between py-6`}
     >
       {/* Logo */}
-      <div>
+      <Link to="/">
         <img src={logo} alt="Logo" className="w-42" />
-      </div>
+      </Link>
 
       {/* Links + Button */}
       <div className="flex items-center gap-6">

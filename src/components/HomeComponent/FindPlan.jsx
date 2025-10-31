@@ -1,11 +1,15 @@
 import { FaCheckCircle } from 'react-icons/fa';
 import CommonButton from '../common/CommonButton';
 import Title from '../common/Title';
-
+import readytofiend from '../../assets/images/readytofiend.png'
 export default function FindPlan() {
   return (
-    <div className="">
-      {/* Main Content Section */}
+    <div
+      className="flex flex-col items-center justify-center bg-cover bg-no-repeat py-20 "
+      style={{
+        backgroundImage: `url(${readytofiend})`,
+      }}
+    >      {/* Main Content Section */}
       <div className="flex flex-col items-center justify-center ">
         {/* Icon with connecting line */}
         <div className="relative mb-8">
