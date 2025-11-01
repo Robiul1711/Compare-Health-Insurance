@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Title from "../common/Title";
 import { ProgressIcon, ThunderIcon } from "../Icon";
 import img1 from "../../assets/images/img1.png";
 import CommonButton from "../common/CommonButton";
+import gsap from "gsap";
 
 const insurancePlans = [
   {
@@ -32,10 +33,53 @@ const insurancePlans = [
 ];
 
 const RigntHealthInsurance = () => {
+  const sectionRef = useRef(null);
+  const headerRef = useRef(null);
+  const dividerRef = useRef(null);
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+    // Animate section fade-in
+    tl.fromTo(
+      sectionRef.current,
+      { opacity: 0, y: 80 },
+      { opacity: 1, y: 0, duration: 1 }
+    )
+
+      // Animate header
+      .fromTo(
+        headerRef.current,
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 0.8 },
+        "-=0.6"
+      )
+
+      // Animate divider line
+      .fromTo(
+        dividerRef.current,
+        { width: 0, opacity: 0 },
+        { width: "100%", opacity: 1, duration: 0.8 },
+        "-=0.4"
+      )
+
+      // Animate cards in a staggered fashion
+      .fromTo(
+        cardsRef.current,
+        { opacity: 0, y: 60 },
+        { opacity: 1, y: 0, duration: 0.8, stagger: 0.2 },
+        "-=0.2"
+      );
+  }, []);
+
   return (
-    <section className="flex flex-col gap-12">
+    <section
+      ref={sectionRef}
+      className="flex flex-col gap-12"
+    >
       {/* Header */}
-      <div className="flex flex-col items-center gap-6 max-w-[900px] mx-auto text-center">
+      <div ref={headerRef} className="flex flex-col items-center gap-6 max-w-[900px] mx-auto text-center">
         <Title
           level="title48"
           className="flex flex-wrap items-center justify-center gap-3 text-balance"
@@ -55,14 +99,18 @@ const RigntHealthInsurance = () => {
         </Title>
       </div>
 
-<div className="max-w-[700px] mx-auto h-0.5 bg-Primary rounded-full w-full"></div>
-
+      {/* Divider */}
+      <div
+        ref={dividerRef}
+        className="max-w-[700px] mx-auto h-0.5 bg-Primary rounded-full w-full"
+      ></div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 ">
-        {insurancePlans.map((plan) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {insurancePlans.map((plan, index) => (
           <div
             key={plan.id}
+            ref={(el) => (cardsRef.current[index] = el)}
             className="flex flex-col rounded-2xl bg-Primary/10 p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
           >
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-4">
@@ -72,7 +120,9 @@ const RigntHealthInsurance = () => {
                   {plan.subtitle}
                 </Title>
               </div>
-              <CommonButton link={'/compare-health-insurance'} variant="primary">Compare Now</CommonButton>
+              <CommonButton link={'/compare-health-insurance'} variant="primary">
+                Compare Now
+              </CommonButton>
             </div>
             <img
               src={plan.image}
@@ -87,4 +137,3 @@ const RigntHealthInsurance = () => {
 };
 
 export default RigntHealthInsurance;
-
