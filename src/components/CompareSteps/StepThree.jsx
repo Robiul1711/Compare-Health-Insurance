@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import { Phone } from 'lucide-react';
+import React, { useState } from "react";
+import { Phone } from "lucide-react";
 
 const countries = [
-  { code: 'US', name: 'United States' },
-  { code: 'GB', name: 'United Kingdom' },
-  { code: 'CA', name: 'Canada' },
-  { code: 'AU', name: 'Australia' },
-  { code: 'DE', name: 'Germany' },
-  { code: 'FR', name: 'France' },
-  { code: 'JP', name: 'Japan' },
-  { code: 'IN', name: 'India' },
-  { code: 'BD', name: 'Bangladesh' },
-  { code: 'BR', name: 'Brazil' },
+  { code: "US", name: "United States" },
+  { code: "GB", name: "United Kingdom" },
+  { code: "CA", name: "Canada" },
+  { code: "AU", name: "Australia" },
+  { code: "DE", name: "Germany" },
+  { code: "FR", name: "France" },
+  { code: "JP", name: "Japan" },
+  { code: "IN", name: "India" },
+  { code: "BD", name: "Bangladesh" },
+  { code: "BR", name: "Brazil" },
 ];
 
 export default function StepThree() {
-  const [selectedCountry, setSelectedCountry] = useState('');
-  const [hasInsurance, setHasInsurance] = useState('no');
-  const [fullName, setFullName] = useState('John Smith');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  const [selectedCountry, setSelectedCountry] = useState("");
+  const [hasInsurance, setHasInsurance] = useState("no");
+  const [fullName, setFullName] = useState("John Smith");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
 
   return (
     <div className=" flex items-center justify-center sm:p-4">
@@ -61,7 +61,7 @@ export default function StepThree() {
                   type="radio"
                   name="insurance"
                   value="yes"
-                  checked={hasInsurance === 'yes'}
+                  checked={hasInsurance === "yes"}
                   onChange={(e) => setHasInsurance(e.target.value)}
                   className="w-4 h-4 text-blue-600 focus:ring-2 focus:ring-blue-400"
                 />
@@ -72,7 +72,7 @@ export default function StepThree() {
                   type="radio"
                   name="insurance"
                   value="no"
-                  checked={hasInsurance === 'no'}
+                  checked={hasInsurance === "no"}
                   onChange={(e) => setHasInsurance(e.target.value)}
                   className="w-4 h-4 text-blue-600 focus:ring-2 focus:ring-blue-400"
                 />
@@ -129,9 +129,9 @@ export default function StepThree() {
               >
                 <Phone className="w-4 h-4" />
                 Verify
-              <span className="text-xs text-gray-500  text-center">
-                (Optional)  
-              </span>
+                <span className="text-xs text-gray-500  text-center">
+                  (Optional)
+                </span>
               </button>
             </div>
           </div>

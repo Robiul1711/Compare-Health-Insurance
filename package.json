@@ -19,6 +19,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "crypto-js": "^4.2.0",
+    "gsap": "^3.13.0",
     "lucide-react": "^0.507.0",
     "motion": "^12.16.0",
     "react": "19.2.0",
