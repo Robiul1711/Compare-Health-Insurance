@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Disclaimer = () => {
   return (
@@ -10,18 +11,18 @@ const Disclaimer = () => {
           </p>
           
           <div className="flex flex-wrap gap-4 text-sm">
-            <a href="#" className="text-gray-700 underline hover:text-gray-900">
+            <Link to="/privacy-policy" className="text-gray-700 underline hover:text-gray-900">
               Privacy Policy
-            </a>
-            <a href="#" className="text-gray-700 underline hover:text-gray-900">
+            </Link>
+            <Link to="/terms-of-service" className="text-gray-700 underline hover:text-gray-900">
               Terms & Policy
-            </a>
-            <a href="#" className="text-gray-700 underline hover:text-gray-900">
+            </Link>
+            <Link to="/compliance" className="text-gray-700 underline hover:text-gray-900">
               Compliance
-            </a>
-            <a href="#" className="text-gray-700 underline hover:text-gray-900">
+            </Link>
+            <Link to="/code-of-conduct" className="text-gray-700 underline hover:text-gray-900">
               Code of Conduct
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@ import React from 'react'
 const Home = () => {
   return (
     <div>
-    <div className='section-padding-x space-y-24'>
+    <div className='section-padding-x space-y-8 xs:space-y-12 sm:space-y-16 md:space-y-20 lg:space-y-24'>
       <Banner />
       <FundedBy />
       <RigntHealthInsurance />
@@ -19,7 +19,7 @@ const Home = () => {
       <TestimonialSlider />
       <FindPlan />
     </div>
-      <Disclaimer />
+      {/* <Disclaimer /> */}
 
     </div>
   )

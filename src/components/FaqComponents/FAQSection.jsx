@@ -116,11 +116,11 @@ const faqData = [
 
 export default function FAQSection() {
   return (
-    <div className="section-padding-x py-10 space-y-12">
+    <div className="section-padding-x py-4 md:py-10 space-y-6 sm:space-y-8 md:space-y-12">
       {faqData.map((section, index) => (
         <div
           key={index}
-          className={`${section.bg} rounded-3xl py-12 px-6 md:px-12 shadow-sm`}
+          className={`${section.bg} rounded-3xl py-8 sm:py-12 px-4 sm:px-6 md:px-12 shadow-sm`}
         >
           {/* Section Title */}
           <h2 className="text-2xl md:text-3xl font-semibold text-center text-gray-900 mb-8">

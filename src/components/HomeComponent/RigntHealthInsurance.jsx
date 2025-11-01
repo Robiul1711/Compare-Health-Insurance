@@ -72,7 +72,7 @@ const RigntHealthInsurance = () => {
                   {plan.subtitle}
                 </Title>
               </div>
-              <CommonButton variant="primary">Compare Now</CommonButton>
+              <CommonButton link={'/compare-health-insurance'} variant="primary">Compare Now</CommonButton>
             </div>
             <img
               src={plan.image}

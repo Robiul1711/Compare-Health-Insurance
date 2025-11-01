@@ -7,7 +7,9 @@ import CompareHealthInsurance from "@/pages/ComparePage/CompareHealthInsurance";
 import Compliance from "@/pages/CompliancePage/Compliance";
 import ContactPage from "@/pages/ContactPage/ContactPage";
 import Disclaimer from "@/pages/Disclaimer/Disclaimer";
+import DisputePesolutionsPolicyPage from "@/pages/DisputePesolutionsPolicyPage/DisputePesolutionsPolicyPage";
 import FaqPage from "@/pages/FaqPage/FaqPage";
+import FiduciaryDutyPolicyPage from "@/pages/FiduciaryDutyPolicyPage/FiduciaryDutyPolicyPage";
 import Home from "@/pages/home/Home";
 import PrivacyPolicy from "@/pages/PrivacyPolicy/PrivacyPolicy";
 import TermsOfService from "@/pages/TermsOfService/TermsOfService";
@@ -59,6 +61,14 @@ const router = createBrowserRouter([
       {
         path: "/code-of-conduct",
         element: <CodeOfConductPage />,
+      },
+      {
+        path: "/dispute-pesolutions-policy",
+        element: <DisputePesolutionsPolicyPage />,
+      },
+      {
+        path: "/fiduciary-duty-policy",
+        element: <FiduciaryDutyPolicyPage />,
       },
 
     ],

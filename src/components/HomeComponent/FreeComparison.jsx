@@ -1,31 +1,33 @@
+import { Link } from "react-router-dom";
 import comparison from "../../assets/images/comparison.png";
+import Title from "../common/Title";
 export default function FreeComparison() {
   return (
 
-      <div className="flex overflow-hidden rounded-lg">
+      <div className="flex flex-col lg:flex-row gap-5  overflow-hidden rounded-lg">
         {/* Left Section */}
-        <div className="flex w-full  md:w-1/2">
+        <div className="flex w-full  lg:w-1/2">
           <div>
-            <h2 className="mb-4 text-5xl font-bold text-gray-900">
+            <Title level="title48">
               Free Comparison
-            </h2>
-            <p className="text-Secondary font-semibold text-xl">
+            </Title>
+            <Title level="title20">
               Our service is completely free. No charges, ever.
-            </p>
+            </Title>
           </div>
         </div>
 
         {/* Right Section */}
-        <div className="relative w-full md:w-1/2">
+        <div className="relative w-full lg:w-1/2">
           <img
             src={comparison}
             alt="Professional woman in office"
             className="h-full w-full object-cover"
           />
           {/* Overlay Button */}
-          <button className="absolute bottom-8 right-8 rounded-full bg-blue-500 px-6 py-3 font-medium text-white shadow-lg transition-all hover:bg-blue-600 hover:shadow-xl">
+          <Link to="/compare-health-insurance"  className="absolute bottom-8 right-8 rounded-full bg-blue-500 px-6 py-2 xl:py-3 font-medium text-white shadow-lg transition-all hover:bg-blue-600 hover:shadow-xl">
             Compare Now
-          </button>
+          </Link>
         </div>
       </div>
 

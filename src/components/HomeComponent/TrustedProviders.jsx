@@ -1,25 +1,26 @@
 import comparison from "../../assets/images/comparison.png";
+import Title from "../common/Title";
 export default function TrustedProviders() {
   return (
 
-      <div className="flex overflow-hidden rounded-lg">
+      <div className="flex flex-col lg:flex-row gap-5  overflow-hidden rounded-lg">
         {/* Left Section */}
-        <div className="flex w-full  md:w-1/2">
+        <div className="flex w-full  lg:w-1/2">
           <div>
-            <h2 className="mb-4 text-5xl font-bold text-gray-900">
+            <Title level="title48">
     Trusted Providers
-            </h2>
-            <p className="text-Secondary font-semibold text-xl">
+            </Title>
+            <Title level="title20">
             We work with leading insurance companies you can trust.
-            </p>
+            </Title>
           </div>
         </div>
 
         {/* Right Section */}
-        <div className=" w-full md:w-1/2">
+        <div className=" w-full lg:w-1/2">
           <div className="relative ">
         {/* Image Container */}
-        <div className="relative h-98 flex items-center justify-center p-8">
+        <div className="relative h-98 flex items-center justify-center pb-4 xl:pb-8">
           {/* Handshake Image Placeholder */}
           <div className="relative w-full h-full flex items-center justify-center">
             <img 
@@ -42,14 +43,14 @@ export default function TrustedProviders() {
       </div>
 
       {/* Bottom Section */}
-      <div className="flex items-center gap-4">
+      <div className="flex flex-col xl:flex-row items-center gap-4 w-full">
         {/* Hashtag Section */}
-        <div className="flex-1 bg-blue-100 rounded-3xl px-6 py-10">
+        <div className="flex-1 bg-blue-100 rounded-3xl px-6 py-8 md:py-10 w-full">
           <h2 className="text-2xl font-bold text-gray-800">#LetsStayHealthy</h2>
         </div>
 
         {/* Discount Badge */}
-        <div className="bg-blue-500 rounded-3xl px-8 py-6 shadow-lg">
+        <div className="bg-blue-500 rounded-3xl px-8 py-4 md:py-6 shadow-lg w-full">
           <div className="text-center">
             <p className="text-4xl font-bold text-white">50%</p>
             <p className="text-white text-sm font-medium">Discount</p>

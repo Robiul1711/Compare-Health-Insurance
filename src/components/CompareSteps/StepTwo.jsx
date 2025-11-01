@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Building2, Heart } from 'lucide-react';
 import { LiaToothSolid } from "react-icons/lia";
+import Title from '../common/Title';
 const StepTwo = () => {
   const [selectedCoverage, setSelectedCoverage] = useState('');
   const [selectedProcedures, setSelectedProcedures] = useState([]);
@@ -103,17 +104,17 @@ const StepTwo = () => {
     <div className=" p-4 sm:p-8">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-3">
+        <div className="text-center mb-6 sm:mb-12">
+          <Title level="title48">
             What do you want your insurance to cover?
-          </h1>
+          </Title>
           <p className="text-gray-600">
             We'll find plans that match what you really need.
           </p>
         </div>
 
         {/* Coverage Options */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6 sm:mb-12">
           {coverageOptions.map((option) => {
             const Icon = option.icon;
             const isSelected = selectedCoverage === option.id;
@@ -121,7 +122,7 @@ const StepTwo = () => {
               <button
                 key={option.id}
                 onClick={() => handleCoverageSelect(option.id)}
-                className={`p-8 rounded-2xl border-2 transition-all duration-300 hover:shadow-lg ${
+                className={`p-6 sm:p-8 rounded-2xl border-2 transition-all duration-300 hover:shadow-lg ${
                   isSelected
                     ? 'border-blue-500 bg-blue-50 shadow-md'
                     : 'border-gray-200 bg-white hover:border-blue-300'
@@ -143,7 +144,7 @@ const StepTwo = () => {
 
         {/* Hospital Procedures Section */}
         {shouldShowHospitalProcedures && (
-          <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+          <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 mb-8">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold text-gray-800 mb-2">
                 Choose the hospital procedures

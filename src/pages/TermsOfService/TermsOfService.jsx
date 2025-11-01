@@ -34,7 +34,7 @@ const TermsOfService = () => {
         </div>
 
         {/* Bottom Sections */}
-        <div className="w-full flex flex-col gap-20">
+        <div className="w-full flex flex-col ">
           <TermsServiceSection />
           <ContactUs />
         </div>

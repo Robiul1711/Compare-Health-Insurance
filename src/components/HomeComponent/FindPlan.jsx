@@ -5,7 +5,7 @@ import readytofiend from '../../assets/images/readytofiend.png'
 export default function FindPlan() {
   return (
     <div
-      className="flex flex-col items-center justify-center bg-cover bg-no-repeat py-20 "
+      className="flex flex-col items-center justify-center section-padding-x text-center bg-cover bg-no-repeat py-10 "
       style={{
         backgroundImage: `url(${readytofiend})`,
       }}
@@ -17,8 +17,8 @@ export default function FindPlan() {
   
           
           {/* Icon */}
-          <div className="bg-Primary rounded-2xl p-5 shadow-lg">
-            <FaCheckCircle className="w-10 h-10 text-white" />
+          <div className="bg-Primary rounded-2xl p-3 sm:p-5 shadow-lg">
+            <FaCheckCircle className="sm:w-10 sm:h-10 size-8 text-white" />
           </div>
           
          
@@ -30,13 +30,13 @@ export default function FindPlan() {
         </Title>
 
         {/* Subheading */}
-       <p className="text-Secondary font-semibold mt-4">
+       <p className="text-Secondary font-semibold mt-4  text-center">
           Join thousands of satisfied customers who found better coverage at better prices
         </p>
 
         {/* CTA Button */}
         <div  className='py-6'>
-        <CommonButton variant='primary'>
+        <CommonButton link={'/compare-health-insurance'} variant='primary'>
           Get Your Free Comparison
         </CommonButton>
 

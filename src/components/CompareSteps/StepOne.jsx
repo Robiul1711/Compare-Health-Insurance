@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Title from "../common/Title";
 
 export default function StepOne() {
   const [selectedOption, setSelectedOption] = useState("single");
@@ -30,11 +31,11 @@ export default function StepOne() {
     <div className="flex items-center justify-center p-4">
       <div className="w-full max-w-3xl">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-semibold text-gray-900 mb-4">
+        <div className="text-center mb-6 sm:mb-12">
+          <Title level="title48">
             What kind of health cover do you need?
-          </h1>
-          <p className="text-gray-600">
+          </Title>
+          <p className="text-gray-600  mt-4">
             Pick the option that best fits you. Don't worry — you can change later.
           </p>
         </div>
@@ -48,7 +49,7 @@ export default function StepOne() {
                 key={option.id}
                 onClick={() => setSelectedOption(option.id)}
                 className={`
-                  p-8 rounded-lg text-center transition-all duration-200 border
+                 p-4 sm:p-8 rounded-lg text-center transition-all duration-200 border
                   ${isSelected
                     ? "bg-blue-500 text-white shadow-lg border-blue-500"
                     : "bg-blue-50 text-gray-900 hover:bg-blue-100 border-transparent"

@@ -18,12 +18,12 @@ export default function MessageForm() {
 
   return (
     <div className="flex items-center justify-center ">
-      <div className="w-full max-w-xl bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl shadow-lg p-8">
-        <h1 className="text-3xl font-bold text-slate-900 mb-8">Send Us a Message</h1>
+      <div className="w-full  bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl shadow-lg p-6 sm:p-8">
+        <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 sm:mb-8">Send Us a Message</h1>
         
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
           {/* Name and Phone Row */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-slate-600 mb-2">
                 Name

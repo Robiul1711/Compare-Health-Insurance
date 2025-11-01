@@ -3,7 +3,7 @@ import { Phone, Mail, Clock } from 'lucide-react';
 export default function GetInTouch() {
   return (
     
-      <div className="bg-[#071D45] backdrop-blur-sm border border-slate-700/50 rounded-xl p-20 w-full max-w-xl">
+      <div className="bg-[#071D45] backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 sm:p-8 md:p-20 w-full">
         <h2 className="text-white text-2xl font-semibold mb-8">Get In Touch</h2>
         
         <div className="space-y-6">

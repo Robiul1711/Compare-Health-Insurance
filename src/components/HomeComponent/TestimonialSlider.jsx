@@ -50,14 +50,14 @@ export default function TestimonialSlider() {
                 </div>
 
                 {/* Content */}
-                <div className="relative px-8 py-16 md:px-16 md:py-26">
+                <div className="relative px-4 sm:px-8 py-16 md:px-16 md:py-26">
                   {/* Quote Icon */}
-                  <div className="flex justify-center mb-8">
+                  <div className="flex justify-center mb-4 sm:mb-8">
                     <Quote className="w-12 h-12 text-white opacity-90" />
                   </div>
 
                   {/* Quote Text */}
-                  <p className="text-white text-xl md:text-3xl font-medium text-center leading-relaxed mb-12 max-w-3xl mx-auto">
+                  <p className="text-white sm:text-xl md:text-3xl font-medium text-center leading-relaxed mb-6 sm:mb-12 max-w-3xl mx-auto">
                     {testimonial.quote}
                   </p>
 

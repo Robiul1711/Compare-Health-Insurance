@@ -22,16 +22,16 @@ const navLinks = [
 
 const Footer = ({ data }) => {
   return (
-    <footer className="section-padding-x py-10">
+    <footer className="section-padding-x py-5 sm:py-6 lg:py-8 xl:py-10">
       <div className="flex flex-col md:flex-row justify-between w-full gap-10">
         {/* Logo and Description */}
-        <div className="md:max-w-[50%] lg:max-w-[40%]">
+        <div className="md:max-w-[40%] ">
           <img src={logo} alt="Company Logo" className=" w-auto mb-5" />
           <p className=" leading-relaxed">
-            Experience the next level of digital excellence. Our products and
-            services are crafted to enhance your daily life and empower your
-            business to grow seamlessly. From online solutions to customer
-            support — we’re here to make it simple, secure, and smart.
+            <strong>Disclaimer:</strong> Health Insurance Advice is provided by
+            Just Switch and administered by the itsMy Group (ABN 85 167 289
+            965). Just Switch and itsMy Group are both signatories to the
+            Private Health Insurance Intermediaries Code of Conduct.
           </p>
 
           <p className="font-semibold text-lg  mt-8 mb-3">Follow us</p>
@@ -74,16 +74,16 @@ const Footer = ({ data }) => {
         </div>
 
         {/* Links Grid */}
-        <div className="lg:w-[40%] flex justify-end">
+        <div className="lg:max-w-[60%] flex justify-end">
           <div className="grid grid-cols-1 xxs:grid-cols-2 w-full md:w-auto lg:grid-cols-3 gap-8">
             {/* Quick Links */}
             <div>
-              <h2 className="text-base md:text-lg font-semibold border-b border-gray-700 pb-2 mb-3">
+              <h2 className="text-base md:text-lg font-semibold border-b border-gray-200 pb-2 mb-3">
                 Quick Links
               </h2>
               <ul className="space-y-3 text-sm md:text-base">
                 {navLinks.map((link) => (
-                  <li key={link.name}>
+                  <li key={link.name} className="hover:text-Primary">
                     <Link
                       to={link.href}
                       className="relative cursor-pointer transition-colors duration-200
@@ -100,11 +100,11 @@ const Footer = ({ data }) => {
 
             {/* Customer Service */}
             <div>
-              <h2 className="text-base md:text-lg font-semibold border-b border-gray-700 pb-2 mb-3">
+              <h2 className="text-base md:text-lg font-semibold border-b border-gray-200 pb-2 mb-3">
                 Legal
               </h2>
               <ul className="space-y-3 text-sm md:text-base">
-                <li>
+                <li className="hover:text-Primary ">
                   <Link
                     to="/privacy-policy"
                     className="cursor-pointer transition-colors"
@@ -112,7 +112,7 @@ const Footer = ({ data }) => {
                     Privacy Policy
                   </Link>
                 </li>
-                <li>
+                <li className="hover:text-Primary ">
                   <Link
                     to="/terms-of-service"
                     className="cursor-pointer transition-colors"
@@ -120,7 +120,7 @@ const Footer = ({ data }) => {
                     Terms of Service
                   </Link>
                 </li>
-                <li>
+                <li className="hover:text-Primary ">
                   <Link
                     to="/disclaimer"
                     className="cursor-pointer transition-colors"
@@ -128,7 +128,7 @@ const Footer = ({ data }) => {
                     Disclaimer
                   </Link>
                 </li>
-                <li>
+                <li className="hover:text-Primary ">
                   <Link
                     to="/compliance"
                     className="cursor-pointer transition-colors"
@@ -136,7 +136,7 @@ const Footer = ({ data }) => {
                     Compliance
                   </Link>
                 </li>
-                <li>
+                <li className="hover:text-Primary ">
                   <Link
                     to="/code-of-conduct"
                     className="cursor-pointer transition-colors"
@@ -144,17 +144,17 @@ const Footer = ({ data }) => {
                     Code of Conduct
                   </Link>
                 </li>
-                <li>
+                <li className="hover:text-Primary ">
                   <Link
-                    to="/dispute-resolutions"
+                    to="/dispute-pesolutions-policy"
                     className="cursor-pointer transition-colors"
                   >
                     Dispute resolutions policy
                   </Link>
                 </li>
-                <li>
+                <li className="hover:text-Primary ">
                   <Link
-                    to="/fiduciary-duty"
+                    to="/fiduciary-duty-policy"
                     className="cursor-pointer transition-colors"
                   >
                     Fiduciary duty policy
@@ -165,24 +165,22 @@ const Footer = ({ data }) => {
 
             {/* Contact Info */}
             <div>
-              <h2 className="text-base md:text-lg font-semibold border-b border-gray-700 pb-2 mb-3">
+              <h2 className="text-base md:text-lg font-semibold border-b border-gray-200 pb-2 mb-3">
                 Contact
               </h2>
-              <ul className="space-y-3  text-sm md:text-base">
+              <ul className="space-y-3  text-sm md:text-base ">
                 <li className="flex items-center gap-1 ">
                   <Mail className="size-6" />
                   <span>
                     {data?.system_settings?.email || "info@healthcompare.com"}
                   </span>
                 </li>
-            
-                  <li className="flex items-center gap-2 ">
-                    <Phone className="size-4" />
-                    <span>{ "(123) 456-7890"}</span>
-                  </li>
-         
-             
-             
+
+                <li className="flex items-center gap-2 ">
+                  <Phone className="size-4" />
+                  <span>{"(123) 456-7890"}</span>
+                </li>
+
                 <li className="flex items-center gap-2">
                   <CiLocationOn className="size-7" />
                   {data?.system_settings?.address ||
@@ -195,7 +193,7 @@ const Footer = ({ data }) => {
       </div>
 
       {/* Copyright */}
-      <div className="flex flex-col sm:flex-row justify-between items-center border-t border-gray-700 mt-10 pt-5  text-sm">
+      <div className="flex flex-col sm:flex-row justify-between items-center border-t border-gray-200 mt-5 sm:mt-10 pt-5  text-sm">
         <p>© 2025 HealthCompare. All rights reserved.</p>
         <p className=" cursor-pointer transition-colors">Trustpilot Reviews</p>
       </div>

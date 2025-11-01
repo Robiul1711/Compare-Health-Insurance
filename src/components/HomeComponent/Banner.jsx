@@ -6,10 +6,10 @@ import banner from "../../assets/images/banner.png";
 import stars from "../../assets/images/stars.png";
 const Banner = () => {
   return (
-    <section className="flex flex-col items-center justify-center text-center gap-8 mt-16">
+    <section className="flex flex-col items-center justify-center text-center gap-8 mt-8 sm:mt-10 md:mt-16">
       {/* Top Badge */}
       <div className="flex items-center gap-3">
-        <div className="text-yellow-400 text-lg"><img src={stars} alt="" /></div>
+        <div className="text-yellow-400 text-lg"><img src={stars} alt="" cll /></div>
         <div className="w-[2px] h-6 bg-gray-300"></div>
         <p className="text-Secondary font-medium">Top Rated by Users</p>
       </div>
@@ -27,7 +27,7 @@ const Banner = () => {
       </Title>
 
       {/* Action Buttons */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:mt-4">
         <CommonButton variant="primary" className="flex items-center gap-2">
           <IoCallOutline className="text-lg" />
           Call Now
@@ -37,7 +37,7 @@ const Banner = () => {
           Get Your Free Comparison
         </CommonButton>
       </div>
-      <img src={banner} alt="" className="mt-10"/>
+      <img src={banner} alt="" className=" mt-5 sm:mt-10 rounded-3xl"/>
     </section>
   );
 };

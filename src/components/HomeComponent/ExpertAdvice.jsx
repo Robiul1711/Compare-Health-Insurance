@@ -1,22 +1,23 @@
 import comparison from "../../assets/images/advice.png";
+import Title from "../common/Title";
 export default function ExpertAdvice() {
   return (
 
-      <div className="flex overflow-hidden rounded-lg">
+      <div className="flex flex-col lg:flex-row gap-5 overflow-hidden rounded-lg">
         {/* Left Section */}
-        <div className="flex w-full  md:w-1/2">
+        <div className="flex w-full  lg:w-1/2">
           <div>
-            <h2 className="mb-4 text-5xl font-bold text-gray-900">
+            <Title level="title48">
     Expert Advice
-            </h2>
-            <p className="text-Secondary font-semibold text-xl">
+            </Title>
+            <Title level="title20">
               Get personalized guidance from experienced advisors.
-            </p>
+            </Title>
           </div>
         </div>
 
         {/* Right Section */}
-        <div className="relative w-full md:w-1/2">
+        <div className="relative w-full lg:w-1/2">
           <img
             src={comparison}
             alt="Professional woman in office"
