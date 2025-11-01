@@ -16,9 +16,9 @@ const FundedBy = () => {
   return (
     <section className="flex flex-col items-center text-center gap-16 ">
       {/* Title */}
-      <Title level="title20" className="text-Secondary !font-bold">
+      {/* <Title level="title20" className="text-Secondary !font-bold">
         Funded by the world’s most innovative teams
-      </Title>
+      </Title> */}
 
       {/* Brand Marquee */}
       <div className="w-full overflow-hidden">
@@ -39,7 +39,7 @@ const FundedBy = () => {
       </div>
 
       {/* Button */}
-      <button className="py-3 px-10 rounded-full border border-Primary text-Primary font-medium shadow-sm hover:bg-Primary hover:text-white transition-all duration-300">
+      <button className="py-2 sm:py-3 px-10 rounded-full border border-Primary text-Primary font-medium shadow-sm hover:bg-Primary hover:text-white transition-all duration-300">
         View All Health Funds
       </button>
     </section>

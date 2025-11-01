@@ -3,6 +3,7 @@ import work1 from "../../assets/images/work1.png";
 import work2 from "../../assets/images/work2.png";
 import work3 from "../../assets/images/work3.png";
 import work4 from "../../assets/images/work4.png";
+import Title from "../common/Title";
 export default function HowWeWork() {
   const steps = [
     {
@@ -34,9 +35,9 @@ export default function HowWeWork() {
   return (
     <div className="section-padding-x bg-Primary/5 py-16 ">
       <div className="">
-        <h1 className="text-4xl font-bold text-center text-gray-900 mb-16">
+        <Title level="title48" className="text-center mb-10">
           How We Work
-        </h1>
+        </Title>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, index) => (

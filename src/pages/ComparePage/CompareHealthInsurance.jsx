@@ -48,10 +48,10 @@ const CompareHealthInsurance = () => {
   return (
     <div>
       {/* Header with Steps */}
-      <div className="flex items-center  justify-between py-12 bg-Primary/30 section-padding-x flex-wrap gap-6">
-        <Title level="title48" className="w-[30%]">Compare Health Insurance</Title>
+      <div className="flex flex-col md:flex-row items-center  justify-between py-12 bg-Primary/30 section-padding-x flex-wrap gap-6">
+        <Title level="title48" className="md:w-[30%] w-full">Compare Health Insurance</Title>
 
-        <div className="flex-1 w-[70%]">
+        <div className="flex-1 md:w-[70%]">
           <Steps
             current={current}
             onChange={onChange}
@@ -61,7 +61,7 @@ const CompareHealthInsurance = () => {
       </div>
 
       {/* Step Content */}
-      <div className="section-padding-x">
+      <div className="section-padding-x pb-10 lg:pb-16 xl:pb-20 ">
         <div className="mt-10">{steps[current].content}</div>
 
         {/* Buttons */}
@@ -90,7 +90,7 @@ const CompareHealthInsurance = () => {
           )}
         </div>
       </div>
-         <Disclaimer />
+         {/* <Disclaimer /> */}
     </div>
   );
 };

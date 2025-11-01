@@ -32,26 +32,26 @@ export default function OurValue() {
   ];
 
   return (
-    <div className="section-padding-x bg-Primary/2 py-20">
+    <div className="section-padding-x bg-Primary/2 py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20">
       <div className="">
-        <Title level="title48">Our Value</Title>
+        <Title level="title48" className="text-center">Our Value</Title>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6  sm:gap-8 mt-6 md:mt-12">
           {values.map((value, index) => {
             const Icon = value.icon;
             return (
               <div
                 key={index}
-                className={`bg-white rounded-lg p-8 transition-all   shadow hover:border-Primary hover:shadow-custom duration-300
+                className={`bg-white rounded-lg p-6 sm:p-8 transition-all   shadow hover:border-Primary hover:shadow-custom duration-300
                 }`}
               >
                 <div className="flex justify-center mb-6">
-                  <div className="w-24 h-24 bg-Primary/5 rounded-full flex items-center justify-center">
-                    <Icon className="" />
+                  <div className="size-16 sm:size-18 md:size-20 lg:size-24 bg-Primary/5 rounded-full flex items-center justify-center">
+                    <Icon className="size-10 sm:size-12 md:size-14 lg:size-auto" />
                   </div>
                 </div>
                 
-                <h3 className="text-3xl font-semibold text-gray-900 text-center mb-3">
+                <h3 className="text-xl sm:text-3xl font-semibold text-gray-900 text-center mb-3">
                   {value.title}
                 </h3>
                 

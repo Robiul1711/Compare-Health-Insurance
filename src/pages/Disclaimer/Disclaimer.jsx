@@ -31,7 +31,7 @@ const Disclaimer = () => {
         </div>
 
         {/* Bottom Sections */}
-        <div className="w-full flex flex-col gap-20">
+        <div className="w-full flex flex-col ">
     <DisclaimerSection />
           <ContactUs />
         </div>

@@ -27,7 +27,7 @@ const MindMatters = () => {
     {
       id: 1,
       name: "Free Comparison",
-      icon: <ComparisonIcon />,
+      icon: <ComparisonIcon className="size-5 sm:size-6 md:size-auto" />,
       type: "content",
       content: <FreeComparison />,
     },
@@ -35,14 +35,14 @@ const MindMatters = () => {
     {
       id: 2,
       name: "Trusted Providers",
-      icon: <TrustedProvidersIcon />,
+      icon: <TrustedProvidersIcon className="size-5 sm:size-6 md:size-auto"/>,
       type: "content",
       content: <TrustedProviders />,
     },
     {
       id: 3,
       name: "Expert Advice",
-      icon: <ExpartProviderIcon />,
+      icon: <ExpartProviderIcon className="size-5 sm:size-6 md:size-auto"/>,
       type: "content",
       content: <ExpertAdvice />,
     },
@@ -53,7 +53,7 @@ const MindMatters = () => {
         We’re Different — Because Your Peace of Mind Matters
       </Title>
 
-      <div className="w-full mt-24">
+      <div className="w-full mt-10 sm:mt-16 md:mt-24">
         <div className="flex flex-col sm:flex-row gap-4 md:gap-6 rounded-xl overflow-hidden">
           {/* Sidebar Tabs */}
           <div className="flex sm:w-62 sm:flex-col overflow-x-auto sm:overflow-visible ">
@@ -109,7 +109,7 @@ const MindMatters = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -10 }}
                 transition={{ duration: 0.3 }}
-                className="p-4 md:p-6  overflow-y-auto"
+                className="  overflow-y-auto"
               >
                 {/* <h3 className="text-lg font-semibold flex items-center gap-2 mb-4 text-gray-900 dark:text-white">
             <span>{tabs.find((t) => t.id === activeTab)?.icon}</span>

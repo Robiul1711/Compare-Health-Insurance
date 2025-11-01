@@ -39,7 +39,7 @@ export default function TermsServiceSection() {
   ];
 
   return (
-    <div className="bg-[#0A0A0A]/60 py-14 px-6 md:px-12 lg:px-24 relative overflow-hidden">
+    <div className="bg-[#0A0A0A]/70 py-14 px-6 md:px-12 lg:px-24 relative overflow-hidden">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative">
         {/* 🔹 Vertical Dividers */}
         <div className="hidden md:block absolute left-1/3 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white to-transparent"></div>
