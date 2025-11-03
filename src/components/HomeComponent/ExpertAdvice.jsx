@@ -10,7 +10,7 @@ export default function ExpertAdvice() {
             <Title level="title48">
     Expert Advice
             </Title>
-            <Title level="title20">
+          <Title level="title20" className="sm:py-4 py-1 text-Secondary font-semibold">
               Get personalized guidance from experienced advisors.
             </Title>
           </div>

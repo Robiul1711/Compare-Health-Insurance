@@ -1,4 +1,4 @@
-import comparison from "../../assets/images/comparison.png";
+import trustprovider from "../../assets/images/trustprovider.png";
 import Title from "../common/Title";
 export default function TrustedProviders() {
   return (
@@ -10,7 +10,7 @@ export default function TrustedProviders() {
             <Title level="title48">
     Trusted Providers
             </Title>
-            <Title level="title20">
+             <Title level="title20" className="sm:py-4 py-1 text-Secondary font-semibold">
             We work with leading insurance companies you can trust.
             </Title>
           </div>
@@ -24,7 +24,7 @@ export default function TrustedProviders() {
           {/* Handshake Image Placeholder */}
           <div className="relative w-full h-full flex items-center justify-center">
             <img 
-              src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=800&q=80" 
+              src={trustprovider} 
               alt="Handshake representing care" 
               className="w-full h-full object-cover rounded-2xl"
             />
@@ -46,16 +46,16 @@ export default function TrustedProviders() {
       <div className="flex flex-col xl:flex-row items-center gap-4 w-full">
         {/* Hashtag Section */}
         <div className="flex-1 bg-blue-100 rounded-3xl px-6 py-8 md:py-10 w-full">
-          <h2 className="text-2xl font-bold text-gray-800">#LetsStayHealthy</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 text-center">#LetsStayHealthy</h2>
         </div>
 
-        {/* Discount Badge */}
+        {/* Discount Badge
         <div className="bg-blue-500 rounded-3xl px-8 py-4 md:py-6 shadow-lg w-full">
           <div className="text-center">
             <p className="text-4xl font-bold text-white">50%</p>
             <p className="text-white text-sm font-medium">Discount</p>
           </div>
-        </div>
+        </div> */}
       </div>
 
         </div>

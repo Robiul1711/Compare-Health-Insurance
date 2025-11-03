@@ -3,30 +3,34 @@ export default function CodeOfConductSection() {
     {
       title: "Our Promise to You",
       description: "We’re committed to delivering a simple, fair, and trustworthy experience every time you use our service.",
+      note: "To maintain these standards, we promise to:",
       items: [
-        "Your name and contact details (phone, email)",
-        "Information you provide when requesting a comparison or callback",
-        "Website usage data (via cookies or analytics tools)",
+        "Be honest and clear in all information we provide.",
+        "Protect your privacy and keep your personal details safe.",
+        "Treat every customer fairly, with respect and professionalism.",
+        "Provide accurate and current information about health funds and policies.",
+        "Resolve complaints quickly and fairly, with care and transparency.",
+        "Train our team members to follow the Code and uphold our values at every step.",
       ],
     },
     {
       title: "What the Code Means for You",
       description: "By following the Code, CompareSure ensures you always:",
       items: [
-        "Provide comparison services and connect you with insurance providers",
-        "Contact you about your inquiry or request",
-        "Improve our website and user experience",
-        "Comply with legal or regulatory requirements",
+        "Know who you’re dealing with and how we work.",
+        "Receive straightforward, easy-to-understand information.",
+        "Get support from team members who are properly trained and qualified.",
+        "Have confidence that your best interests are always put first.",
       ],
     },
     {
       title: "Our Partners",
     //   description: "We may share your details only with:",
       items: [
-        "Our Partners",
-        "Our internal support or technical service providers (if required)",
+        "We only work with registered Australian health funds that also comply with the Private Health Insurance Code of Conduct.",
+        "This ensures that every comparison we provide meets industry and ethical standards.",
       ],
-      note: "We never sell your information to third parties.",
+      // note: "This ensures that every comparison we provide meets industry and ethical standards.",
     },
   ];
 
@@ -47,7 +51,11 @@ export default function CodeOfConductSection() {
 
               <div className="space-y-4">
                 <p className="text-gray-300 text-sm">{section.description}</p>
-
+           {section.note && (
+                  <p className="text-gray-300 text-sm font-medium mt-6">
+                    {section.note}
+                  </p>
+                )}
                 <ul className="space-y-3">
                   {section.items.map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
@@ -57,11 +65,7 @@ export default function CodeOfConductSection() {
                   ))}
                 </ul>
 
-                {section.note && (
-                  <p className="text-gray-300 text-sm font-medium mt-6">
-                    {section.note}
-                  </p>
-                )}
+     
               </div>
             </div>
           ))}

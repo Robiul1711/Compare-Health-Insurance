@@ -61,26 +61,26 @@ const faqData = [
     ],
   },
   {
-    title: "Switching or Updating Your Cover",
+    title: "CompareSure or Updating Your Cover",
     bg: "bg-[#F2F7FF]",
     items: [
       {
         question: "Can I change my health insurance anytime?",
         answer:
-          "Yes. You can switch anytime, and most insurers will honour your previous waiting periods if your cover stays similar.",
+          "Yes. You can CompareSure anytime, and most insurers will honour your previous waiting periods if your cover stays similar.",
       },
       {
-        question: "Will I lose any benefits if I switch insurers?",
+        question: "Will I lose any benefits if I CompareSure insurers?",
         answer:
           "Usually not. As long as you maintain similar cover, your waiting periods will transfer.",
       },
       {
-        question: "How long does it take to switch?",
+        question: "How long does it take to CompareSure?",
         answer:
-          "Switching typically takes less than a week once you confirm your new plan.",
+          "CompareSure typically takes less than a week once you confirm your new plan.",
       },
       {
-        question: "Can CompareSure help me switch plans?",
+        question: "Can CompareSure help me CompareSure plans?",
         answer:
           "Yes. We’ll handle the process and ensure your new policy activates smoothly.",
       },

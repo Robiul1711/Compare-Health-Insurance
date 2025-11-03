@@ -28,10 +28,7 @@ const Footer = ({ data }) => {
         <div className="md:max-w-[40%] ">
           <img src={logo} alt="Company Logo" className=" w-auto mb-5" />
           <p className=" leading-relaxed">
-            <strong>Disclaimer:</strong> Health Insurance Advice is provided by
-            Just Switch and administered by the itsMy Group (ABN 85 167 289
-            965). Just Switch and itsMy Group are both signatories to the
-            Private Health Insurance Intermediaries Code of Conduct.
+Making health insurance simple, transparent, and stress-free.
           </p>
 
           <p className="font-semibold text-lg  mt-8 mb-3">Follow us</p>
@@ -194,7 +191,7 @@ const Footer = ({ data }) => {
 
       {/* Copyright */}
       <div className="flex flex-col sm:flex-row justify-between items-center border-t border-gray-200 mt-5 sm:mt-10 pt-5  text-sm">
-        <p>© 2025 HealthCompare. All rights reserved.</p>
+        <p className="text-Primary font-medium">© 2025 HealthCompare. All rights reserved.</p>
         <p className=" cursor-pointer transition-colors">Trustpilot Reviews</p>
       </div>
     </footer>

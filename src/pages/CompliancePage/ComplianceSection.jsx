@@ -2,71 +2,88 @@ export default function ComplianceSection() {
   const sections = [
     {
       title: "Information We Collect",
-      description: "CompareSure follows all relevant obligations under the Private Health Insurance Act 2007, Australian Consumer Law (ACL), and other applicable regulations.",
+      description:
+        "CompareSure follows all relevant obligations under the Private Health Insurance Act 2007, Australian Consumer Law (ACL), and other applicable regulations.",
       items: [
-        "Your name and contact details (phone, email)",
-        "Information you provide when requesting a comparison or callback",
-        "Website usage data (via cookies or analytics tools)",
+        "Information provided to customers is clear, accurate, and up to date.",
+        "Our comparison process is fair and unbiased.",
+        "All marketing and communication meet Australian advertising and privacy requirements.",
       ],
     },
     {
       title: "Industry Alignment",
-    //   description: "We use your information to:",
       items: [
-        "Provide comparison services and connect you with insurance providers",
-        "Contact you about your inquiry or request",
-        "Improve our website and user experience",
-        "Comply with legal or regulatory requirements",
+        "We work with trusted health funds registered with the Private Health Insurance Ombudsman (PHIO).",
+        "All partners comply with the Private Health Insurance Code of Conduct.",
+        "We regularly review our processes to stay aligned with ethical and professional industry practices.",
       ],
     },
     {
       title: "Accuracy and Transparency",
-    //   description: "We may share your details only with:",
       items: [
-        "Trusted insurance partners to complete your comparison",
-        "Our internal support or technical service providers (if required)",
+        "Comparison results are updated regularly using data provided by health funds.",
+        {
+          text: "We may receive a commission if you choose a policy through CompareSure, but:",
+          subItems: [
+            "This does not influence how your results are shown.",
+            "Your matches are based only on your needs and preferences.",
+          ],
+        },
+        "We aim to present every policy option clearly and without bias.",
       ],
-      note: "We never sell your information to third parties.",
     },
   ];
 
   return (
     <div className="bg-[#1F1F1F]/80 py-14 section-padding-x">
-   
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          {/* Vertical divider lines */}
-          <div className="hidden md:block absolute left-1/3 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white to-transparent"></div>
-          <div className="hidden md:block absolute left-2/3 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white to-transparent"></div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        {/* Vertical divider lines */}
+        <div className="hidden md:block absolute left-1/3 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white to-transparent"></div>
+        <div className="hidden md:block absolute left-2/3 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white to-transparent"></div>
 
-          {/* Dynamic Columns */}
-          {sections.map((section, index) => (
-            <div key={index} className="space-y-6">
-              <h2 className="text-xl font-semibold text-white mb-6">
-                {section.title}
-              </h2>
+        {sections.map((section, index) => (
+          <div key={index} className="space-y-6">
+            <h2 className="text-xl font-semibold text-white mb-6">
+              {section.title}
+            </h2>
 
-              <div className="space-y-4">
+            <div className="space-y-4">
+              {section.description && (
                 <p className="text-gray-300 text-sm">{section.description}</p>
+              )}
 
-                <ul className="space-y-3">
-                  {section.items.map((item, i) => (
+              <ul className="space-y-3">
+                {section.items.map((item, i) =>
+                  typeof item === "string" ? (
                     <li key={i} className="flex items-start gap-3">
                       <span className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0"></span>
                       <span className="text-gray-300 text-sm">{item}</span>
                     </li>
-                  ))}
-                </ul>
-
-                {section.note && (
-                  <p className="text-gray-300 text-sm font-medium mt-6">
-                    {section.note}
-                  </p>
+                  ) : (
+                    <li key={i} className="text-gray-300 text-sm space-y-2">
+                      <div className="flex items-start gap-3">
+                        <span className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0"></span>
+                        <span>{item.text}</span>
+                      </div>
+                      <ul className="pl-6 space-y-2">
+                        {item.subItems.map((sub, j) => (
+                          <li
+                            key={j}
+                            className="flex items-start gap-2 text-gray-400 text-sm"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 flex-shrink-0"></span>
+                            <span>{sub}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  )
                 )}
-              </div>
+              </ul>
             </div>
-          ))}
-        </div>
-
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
