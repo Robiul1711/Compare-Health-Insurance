@@ -26,7 +26,7 @@ export default function GetInTouch() {
             </div>
             <div>
               <h3 className="text-white font-medium mb-1">Email</h3>
-              <p className="text-gray-300 text-sm">example@gmail.com</p>
+              <p className="text-gray-300 text-sm">info@comparesure.com.au</p>
             </div>
           </div>
 

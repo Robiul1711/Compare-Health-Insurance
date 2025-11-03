@@ -11,7 +11,7 @@ import gsap from "gsap";
 const insurancePlans = [
   {
     id: 1,
-    title: "Singles Health Insurance",
+    title: "Single Health Insurance",
     subtitle: "Find the best health insurance plan for yourself",
     image: img1,
   },

@@ -33,42 +33,53 @@ Making health insurance simple, transparent, and stress-free.
           </p>
 
           <p className="font-semibold text-lg  mt-8 mb-3">Follow us</p>
-          <div className="flex space-x-4">
-            <a
-              href={data?.social_links?.facebook_link}
-              className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
-            >
-              <Facebook className="size-5 md:size-6 text-Primary" />
-            </a>
+      <div className="flex space-x-4">
+  <a
+    href={data?.social_links?.facebook_link || "https://facebook.com"}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
+  >
+    <Facebook className="size-5 md:size-6 text-Primary" />
+  </a>
 
-            <a
-              href={data?.social_links?.instagram_link}
-              className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
-            >
-              <Instagram className="size-5 md:size-6 text-Primary" />
-            </a>
+  <a
+    href={data?.social_links?.instagram_link || "https://instagram.com"}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
+  >
+    <Instagram className="size-5 md:size-6 text-Primary" />
+  </a>
 
-            <a
-              href={data?.social_links?.linkedin_link}
-              className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
-            >
-              <Linkedin className="size-5 md:size-6 text-Primary" />
-            </a>
+  <a
+    href={data?.social_links?.linkedin_link || "https://linkedin.com"}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
+  >
+    <Linkedin className="size-5 md:size-6 text-Primary" />
+  </a>
 
-            <a
-              href={data?.social_links?.youtube_link}
-              className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
-            >
-              <Youtube className="size-5 md:size-6 text-Primary" />
-            </a>
+  <a
+    href={data?.social_links?.youtube_link || "https://youtube.com"}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
+  >
+    <Youtube className="size-5 md:size-6 text-Primary" />
+  </a>
 
-            <a
-              href={data?.social_links?.twitter_link}
-              className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
-            >
-              <Twitter className="size-5 md:size-6 text-Primary" />
-            </a>
-          </div>
+  <a
+    href={data?.social_links?.twitter_link || "https://twitter.com"}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
+  >
+    <Twitter className="size-5 md:size-6 text-Primary" />
+  </a>
+</div>
+
         </div>
 
         {/* Links Grid */}
