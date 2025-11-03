@@ -16,7 +16,7 @@ const countries = [
 
 export default function StepThree() {
   const [selectedCountry, setSelectedCountry] = useState("");
-  const [hasInsurance, setHasInsurance] = useState("no");
+  const [hasInsurance, setHasInsurance] = useState("");
   const [fullName, setFullName] = useState("John Smith");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
