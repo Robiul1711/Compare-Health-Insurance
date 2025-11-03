@@ -18,6 +18,7 @@ const navLinks = [
   { name: "About us", href: "/about" },
   { name: "FAQs", href: "/faqs" },
   { name: "Contact us", href: "/contacts" },
+  // { name: "Contact us", href: "/contacts" },
 ];
 
 const Footer = ({ data }) => {
@@ -173,7 +174,7 @@ Making health insurance simple, transparent, and stress-free.
                 <li className="flex items-center gap-1 ">
                   <Mail className="size-6" />
                   <span>
-                    {data?.system_settings?.email || "info@healthcompare.com"}
+                    {data?.system_settings?.email || "info@comparesure.com.au"}
                   </span>
                 </li>
 
@@ -191,7 +192,7 @@ Making health insurance simple, transparent, and stress-free.
 
       {/* Copyright */}
       <div className="flex flex-col sm:flex-row justify-between items-center border-t border-gray-200 mt-5 sm:mt-10 pt-5  text-sm">
-        <p className="text-Primary font-medium">© 2025 HealthCompare. All rights reserved.</p>
+        <p className="text-Primary font-medium">© 2025 CompareSure. All rights reserved.</p>
         <p className=" cursor-pointer transition-colors">Trustpilot Reviews</p>
       </div>
     </footer>

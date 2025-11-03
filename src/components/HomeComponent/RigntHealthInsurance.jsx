@@ -17,7 +17,7 @@ const insurancePlans = [
   },
   {
     id: 2,
-    title: "Single couples Health Insurance",
+    title: "Couples Health Insurance",
     subtitle: "Compare health insurance options for you and your partner",
     image: img2,
   },
