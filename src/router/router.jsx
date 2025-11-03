@@ -10,6 +10,7 @@ import Disclaimer from "@/pages/Disclaimer/Disclaimer";
 import DisputePesolutionsPolicyPage from "@/pages/DisputePesolutionsPolicyPage/DisputePesolutionsPolicyPage";
 import FaqPage from "@/pages/FaqPage/FaqPage";
 import FiduciaryDutyPolicyPage from "@/pages/FiduciaryDutyPolicyPage/FiduciaryDutyPolicyPage";
+import FundPage from "@/pages/FundPage/FundPage";
 import Home from "@/pages/home/Home";
 import PrivacyPolicy from "@/pages/PrivacyPolicy/PrivacyPolicy";
 import TermsOfService from "@/pages/TermsOfService/TermsOfService";
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/contacts",
         element: <ContactPage />,
+      },
+      {
+        path: "/fund",
+        element: <FundPage />,
       },
       {
         path: "/privacy-policy",

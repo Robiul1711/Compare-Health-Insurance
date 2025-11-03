@@ -11,7 +11,7 @@ export default function FreeComparison() {
             <Title level="title48">
               Free Comparison
             </Title>
-            <Title level="title20">
+            <Title level="title20" className="sm:py-4 py-1 text-Secondary font-semibold">
               Our service is completely free. No charges, ever.
             </Title>
           </div>

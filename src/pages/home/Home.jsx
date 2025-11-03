@@ -19,7 +19,7 @@ const Home = () => {
       <TestimonialSlider />
       <FindPlan />
     </div>
-      {/* <Disclaimer /> */}
+      <Disclaimer />
 
     </div>
   )

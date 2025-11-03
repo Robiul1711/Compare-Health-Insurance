@@ -15,8 +15,8 @@ export default function AboutBanner() {
           
           {/* Right Column - Description */}
           <div className="pt-4">
-            <p className="text-gray-600 sm:text-lg leading-relaxed">
-              At CompareSure, we help people find the right health insurance easily. We know comparing different plans, prices, and benefits can be confusing. That's why we created CompareSure—to make the process quick, simple, and stress-free.
+            <p className="text-Secondary font-medium sm:text-lg leading-relaxed">
+            <span className="font-bold">  At CompareSure,</span> we help people find the right health insurance easily. We know comparing different plans, prices, and benefits can be confusing. That's why we created CompareSure—to make the process quick, simple, and stress-free.
             </p>
           </div>
         </div>

@@ -90,7 +90,7 @@ const CompareHealthInsurance = () => {
           )}
         </div>
       </div>
-         {/* <Disclaimer /> */}
+         <Disclaimer />
     </div>
   );
 };

@@ -79,9 +79,13 @@ const StepTwo = () => {
     { id: 'massage', label: 'Remedial massage' },
     { id: 'acupuncture', label: 'Acupuncture' },
     { id: 'dietetics', label: 'Dietetics' },
+    { id: 'speech-therapy', label: 'Speech Therapy' },
+    { id: 'occupational', label: 'Occupational' },
+    { id: 'ambulance', label: 'Ambulance' },
     { id: 'naturopathy', label: 'Naturopathy' },
     { id: 'hearing-aids', label: 'Hearing aids' },
     { id: 'orthotics', label: 'Orthotics' },
+    { id: 'fertility-treatment', label: 'Fertility Treatment' },
   ];
 
   const toggleProcedure = (procedureId) => {
@@ -152,7 +156,7 @@ const StepTwo = () => {
               <p className="text-gray-600">you are interested in</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {hospitalProcedures.map((procedure) => {
                 const isSelected = selectedProcedures.includes(procedure.id);
                 return (
@@ -198,7 +202,7 @@ const StepTwo = () => {
               <p className="text-gray-600">you are interested in</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {extrasProcedures.map((procedure) => {
                 const isSelected = selectedProcedures.includes(procedure.id);
                 return (

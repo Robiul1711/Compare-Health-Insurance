@@ -9,9 +9,16 @@ import image3 from "@/assets/images/b3.png";
 import image4 from "@/assets/images/b4.png";
 import image5 from "@/assets/images/b5.png";
 import image6 from "@/assets/images/b6.png";
+import image7 from "@/assets/images/b7.png";
+import image8 from "@/assets/images/b8.png";
+import image9 from "@/assets/images/b9.png";
+import image10 from "@/assets/images/b10.png";
+import image11 from "@/assets/images/b11.png";
+import image12 from "@/assets/images/b12.png";
+import { Link } from "react-router-dom";
 
 const FundedBy = () => {
-  const brands = [image1, image2, image3, image4, image5, image6];
+  const brands = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12];
 
   return (
     <section className="flex flex-col items-center text-center gap-16 ">
@@ -39,9 +46,9 @@ const FundedBy = () => {
       </div>
 
       {/* Button */}
-      <button className="py-2 sm:py-3 px-10 rounded-full border border-Primary text-Primary font-medium shadow-sm hover:bg-Primary hover:text-white transition-all duration-300">
+      <Link to="/fund" className="py-2 sm:py-3 px-10 rounded-full border border-Primary text-Primary font-medium shadow-sm hover:bg-Primary hover:text-white transition-all duration-300">
         View All Health Funds
-      </button>
+      </Link>
     </section>
   );
 };
