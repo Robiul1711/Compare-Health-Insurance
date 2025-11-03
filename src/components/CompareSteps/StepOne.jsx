@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Title from "../common/Title";
 
 export default function StepOne() {
-  const [selectedOption, setSelectedOption] = useState("single");
+  const [selectedOption, setSelectedOption] = useState("");
 
   const coverOptions = [
     {
