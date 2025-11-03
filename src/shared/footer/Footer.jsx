@@ -166,6 +166,10 @@ Making health insurance simple, transparent, and stress-free.
                 Contact
               </h2>
               <ul className="space-y-3  text-sm md:text-base ">
+                <li className="flex items-center gap-2 ">
+                  <Phone className="size-4" />
+                  <span>{"(123) 456-7890"}</span>
+                </li>
                 <li className="flex items-center gap-1 ">
                   <Mail className="size-6" />
                   <span>
@@ -173,16 +177,12 @@ Making health insurance simple, transparent, and stress-free.
                   </span>
                 </li>
 
-                <li className="flex items-center gap-2 ">
-                  <Phone className="size-4" />
-                  <span>{"(123) 456-7890"}</span>
-                </li>
 
-                <li className="flex items-center gap-2">
+                {/* <li className="flex items-center gap-2">
                   <CiLocationOn className="size-7" />
                   {data?.system_settings?.address ||
                     "123 Insurance Street, London, UK"}
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
