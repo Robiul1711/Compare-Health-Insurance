@@ -7,7 +7,7 @@ const Disclaimer = () => {
       <div className="bg-blue-100 px-6 py-8 mt-auto my-10">
         <div className="max-w-6xl mx-auto">
           <p className="text-gray-700 text-sm mb-4">
-            <span className="font-semibold">Disclaimer:</span> Health Insurance Advice is provided by Just CompareSure and administered by the itsMy Group (ABN 85 167 289 965). Just CompareSure and itsMy Group are both signatories to the Private Health Insurance Intermediaries Code of Conduct.
+            <span className="font-semibold">Disclaimer:</span> Health Insurance Advice is provided by CompareSure and administered by ItsMy Group (ABN 85 167 289 965). CompareSure and ItsMy Group are both signatories to the Private Health Insurance Intermediaries Code of Conduct.
           </p>
           
           <div className="flex flex-wrap gap-4 text-sm">
