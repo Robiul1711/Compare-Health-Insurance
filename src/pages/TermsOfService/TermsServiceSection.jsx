@@ -33,8 +33,13 @@ export default function TermsServiceSection() {
     },
     {
       title: "Limitation of Liability",
+      items: [
+        "The use or inability to use our website,",
+        " Errors, omissions, or inaccuracies in the information provided,",
+        "Any decisions or actions you take based on comparison results."
+      ],
       description:
-        "CompareSure, its employees, and affiliates are not liable for any loss, damage, or expense arising from:\n\n• The use or inability to use our website,\n• Errors, omissions, or inaccuracies in the information provided,\n• Any decisions or actions you take based on comparison results.",
+        "CompareSure, its employees, and affiliates are not liable for any loss, damage, or expense arising from:",
     },
   ];
 
