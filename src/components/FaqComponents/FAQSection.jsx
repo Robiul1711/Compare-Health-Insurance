@@ -25,7 +25,7 @@ const faqData = [
         question:
           "What’s the difference between Hospital Cover and Extras Cover?",
         answer:
-          "Hospital Cover helps with in-hospital treatments. Extras Cover pays for services like dental, optical, and physio.",
+          "Hospital Cover helps with in-hospital treatments. Extras Cover  services like dental, optical, and physio.",
       },
       {
         question: "Can I have both Hospital and Extras Cover?",

@@ -17,7 +17,7 @@ export default function PrivacyInfoSection() {
         "Date of birth",
         "Health insurance history and preferences",
         "Family or relationship status (if relevant to policy comparison)",
-        "Payment or billing information if required for transactions",
+       
         "Any other information you choose to provide",
         "We may also collect non-personal information through website analytics such as browser type, device type, and usage data via cookies (see Section 7).",
 
