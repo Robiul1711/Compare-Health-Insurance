@@ -20,7 +20,7 @@ export default function HowWeWork() {
     },
     {
       icon: work3,
-      title: "Compare Options",
+      title: "Explain Clearly",
       description:
         "Our team guides you step by step, answering questions in plain language.",
     },
@@ -45,7 +45,7 @@ export default function HowWeWork() {
               key={index}
               className="bg-[#5494FF]/5 rounded-2xl p-4 shadow-sm  hover:shadow-md transition-shadow duration-300"
             >
-              <img src={step.icon} alt="" className="object-cover" />
+              <img src={step.icon} alt="" className="object-cover w-full" />
               <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-2 mt-4">
                 {step.title}
               </h3>

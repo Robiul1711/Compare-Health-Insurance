@@ -69,24 +69,28 @@ const StepTwo = () => {
     { id: 'pain-device', label: 'Pain management with device' },
   ];
 
-  const extrasProcedures = [
-    { id: 'dental', label: 'Dental' },
-    { id: 'optical', label: 'Optical' },
-    { id: 'physiotherapy', label: 'Physiotherapy' },
-    { id: 'chiropractic', label: 'Chiropractic' },
-    { id: 'podiatry', label: 'Podiatry' },
-    { id: 'psychology', label: 'Psychology' },
-    { id: 'massage', label: 'Remedial massage' },
-    { id: 'acupuncture', label: 'Acupuncture' },
-    { id: 'dietetics', label: 'Dietetics' },
-    { id: 'speech-therapy', label: 'Speech Therapy' },
-    { id: 'occupational', label: 'Occupational' },
-    { id: 'ambulance', label: 'Ambulance' },
-    { id: 'naturopathy', label: 'Naturopathy' },
-    { id: 'hearing-aids', label: 'Hearing aids' },
-    { id: 'orthotics', label: 'Orthotics' },
-    { id: 'fertility-treatment', label: 'Fertility Treatment' },
-  ];
+const extrasProcedures = [
+  { id: 'general-dental', label: 'General Dental' },
+  { id: 'optical', label: 'Optical' },
+  { id: 'acupuncture', label: 'Acupuncture' },
+  { id: 'dietetics', label: 'Dietetics' },
+  { id: 'major-dental', label: 'Major Dental' },
+  { id: 'physiotherapy', label: 'Physiotherapy' },
+  { id: 'podiatry', label: 'Podiatry' },
+  { id: 'health-aids-appliance', label: 'Health Aids & Appliance' },
+  { id: 'orthodontic', label: 'Orthodontic' },
+  { id: 'remedial-massage', label: 'Remedial Massage' },
+  { id: 'orthotics', label: 'Orthotics' },
+  { id: 'psychology', label: 'Psychology' },
+  { id: 'endodontic', label: 'Endodontic' },
+  { id: 'chiropractic', label: 'Chiropractic' },
+  { id: 'hearing-aids', label: 'Hearing Aids' },
+  { id: 'non-pbs-pharmaceuticals', label: 'Non PBS Pharmaceuticals' },
+  { id: 'lifestyle', label: 'Lifestyle' },
+  { id: 'eye-therapy', label: 'Eye Therapy' },
+  { id: 'occupational-therapy', label: 'Occupational Therapy' },
+  { id: 'speech-therapy', label: 'Speech Therapy' },
+];
 
   const toggleProcedure = (procedureId) => {
     setSelectedProcedures(prev =>

@@ -38,8 +38,8 @@ export default function FiduciaryDutyPolicyPage() {
     {
       title: "5. Contracted Health Funds and Remuneration",
       points: [
-        "Fees received are standard industry payments and do not influence the advice or recommendations we provide.",
-        "Most clients do not pay for our services.",
+        "Fees received are standard industry  and do not influence the advice or recommendations we provide.",
+        "clients don't pay for our services.",
         "Fees support our operations, including staffing, administration, and client support.",
         "On occasion, we may share fees with approved charities, not-for-profits, or partner organisations under formal agreements.",
       ],
@@ -50,7 +50,6 @@ export default function FiduciaryDutyPolicyPage() {
         "That CompareSure is a broker paid by the insurers we represent.",
         "That fees do not influence the impartiality of our advice.",
         "That fees allow us to offer expert advice at no cost to most clients.",
-        "Where applicable, if certain insurers pay higher fees or commissions than others.",
       ],
     },
   ];

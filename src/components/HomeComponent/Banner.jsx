@@ -50,13 +50,13 @@ const Banner = () => {
   return (
     <section className="flex flex-col items-center justify-center text-center gap-8 mt-8 sm:mt-10 md:mt-16">
       {/* Top Badge */}
-      <div ref={badgeRef} className="flex items-center gap-3">
+      {/* <div ref={badgeRef} className="flex items-center gap-3">
         <div className="text-yellow-400 text-lg">
           <img src={stars} alt="stars" />
         </div>
         <div className="w-[2px] h-6 bg-gray-300"></div>
         <p className="text-Secondary font-medium">Top Rated by Users</p>
-      </div>
+      </div> */}
 
       {/* Headings */}
       <Title
