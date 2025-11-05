@@ -49,6 +49,17 @@ const FundedBy = () => {
       <Link to="/fund" className="py-2 sm:py-3 px-10 rounded-full border border-Primary text-Primary font-medium shadow-sm hover:bg-Primary hover:text-white transition-all duration-300">
         View All Health Funds
       </Link>
+<div className=" sm:bg-Primary/10 rounded-2xl sm:p-6 sm:py-10  sm:shadow-sm sm:border sm:border-gray-100">
+  <h3 className="text-sm sm:text-base leading-relaxed text-gray-700 font-medium ">
+    <span className="block text-Secondary font-semibold text-lg lg:text-xl xl:text-2xl mb-2">Disclaimer</span>
+    CompareSure operates as a white-label partner of 
+    <span className="font-semibold text-Primary"> ItsMyGroup Pty Ltd (ABN 85 167 289 965)</span>. 
+    The relationships with participating health funds are held directly by ItsMyGroup, which 
+    administers and maintains all fund agreements. CompareSure utilises ItsMyGroup's platform 
+    and services under this arrangement to provide health insurance comparison and advice to customers.
+  </h3>
+</div>
+
     </section>
   );
 };
