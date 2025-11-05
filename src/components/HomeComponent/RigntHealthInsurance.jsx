@@ -130,7 +130,7 @@ const RigntHealthInsurance = () => {
             <img
               src={plan.image}
               alt={plan.title}
-              className="w-full h-[180px] sm:h-[500px] object-cover rounded-2xl"
+              className="w-full h-[180px] sm:h-[500px] object-cover rounded-2xl hover:scale-[1.01] transition-all ease-in-out duration-300"
             />
           </div>
         ))}
