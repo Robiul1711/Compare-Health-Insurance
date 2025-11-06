@@ -32,7 +32,7 @@ export default function TermsServiceSection() {
         "All content provided on this website is general in nature and does not take into account your personal goals, financial situation, or needs.\n\nYou should consider whether the information is appropriate for you before making any decision, and seek professional advice if necessary.",
     },
     {
-      title: "Limitation of Liability",
+      title: "Limitation of Liability Except when required by law",
       items: [
         "The use or inability to use our website,",
         " Errors, omissions, or inaccuracies in the information provided,",
