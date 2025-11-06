@@ -6,6 +6,7 @@ import Title from "@/components/common/Title";
 import { DisclaimerIcon } from "@/components/Icon";
 import ComplianceSection from "./ComplianceSection";
 import { MdVerifiedUser } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 
 
@@ -32,7 +33,9 @@ const Compliance = () => {
 
           </div>
         </div>
-
+<div className="flex items-center justify-center py-4 sm:py-8 ">
+  <Link to="/how-we-get-paid" className="flex items-center justify-center  bg-Primary px-10 py-2 font-semibold text-white rounded-2xl">How we get paid</Link>
+</div>
         {/* Bottom Sections */}
         <div className="w-full flex flex-col ">
    <ComplianceSection />

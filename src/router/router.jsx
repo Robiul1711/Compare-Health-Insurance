@@ -5,6 +5,7 @@ import AboutPage from "@/pages/AboutPage/AboutPage";
 import CodeOfConductPage from "@/pages/CodeOfConductPage/CodeOfConductPage";
 import CompareHealthInsurance from "@/pages/ComparePage/CompareHealthInsurance";
 import Compliance from "@/pages/CompliancePage/Compliance";
+import HowWeGetPaid from "@/pages/CompliancePage/HowWeGetPaid";
 import ContactPage from "@/pages/ContactPage/ContactPage";
 import Disclaimer from "@/pages/Disclaimer/Disclaimer";
 import DisputePesolutionsPolicyPage from "@/pages/DisputePesolutionsPolicyPage/DisputePesolutionsPolicyPage";
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
       {
         path: "/compliance",
         element: <Compliance />,
+      },
+      {
+        path: "/how-we-get-paid",
+        element: <HowWeGetPaid />,
       },
       {
         path: "/code-of-conduct",
