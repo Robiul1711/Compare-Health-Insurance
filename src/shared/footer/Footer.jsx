@@ -180,7 +180,7 @@ Making health insurance simple, transparent, and stress-free.
               <ul className="space-y-3  text-sm md:text-base ">
                 <li className="flex items-center gap-2 ">
                   <Phone className="size-4" />
-                  <span>{"(123) 456-7890"}</span>
+                  <span>{"0478 711 733"}</span>
                 </li>
                 <li className="flex items-center gap-1 ">
                   <Mail className="size-6" />
