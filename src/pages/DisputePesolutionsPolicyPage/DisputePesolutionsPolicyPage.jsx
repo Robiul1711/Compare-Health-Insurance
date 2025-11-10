@@ -24,6 +24,7 @@ const DisputeResolutionsPolicyPage = () => {
       points: [
         "Email: complaints@comparesure.com.au",
         "Post: CompareSure, 2/290 Boundary Street, Spring Hill QLD 4000",
+        "Phone: Call our director on 0478711733 (we will update this once we have a complaint number)",
       ],
       note: "Our team will take the details and confirm them with you to ensure accuracy before proceeding.",
     },
