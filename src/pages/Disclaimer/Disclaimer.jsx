@@ -11,7 +11,7 @@ const Disclaimer = () => {
   return (
     <div>
       <div
-        className="min-h-screen bg-cover bg-center bg-no-repeat flex flex-col"
+        className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed flex flex-col"
         style={{
           backgroundImage: `linear-gradient(180deg, #0A2043 10%, rgba(44, 46, 59, 0.00) 100%), url(${bgBanner})`,
         }}
