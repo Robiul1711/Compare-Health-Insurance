@@ -1,4 +1,5 @@
 import React from "react";
+import bgBanner from "../../assets/images/bgBanner.png";
 
 export default function FiduciaryDutyPolicyPage() {
   const sections = [
@@ -23,133 +24,151 @@ export default function FiduciaryDutyPolicyPage() {
       title: "3. Enabling Informed Decisions",
       points: [
         "All communications will be clear, accurate, and in plain language.",
-        "We guide clients through completing applications, renewals, and other insurer requirements.",
-        "Questions from clients will be answered promptly, ensuring understanding before decisions are made.",
+        "We guide clients through completing applications, renewals, and insurer documentation.",
+        "Client questions will be answered promptly to ensure understanding.",
       ],
     },
     {
       title: "4. Assistance to Clients",
       points: [
-        "Applications, renewals, or cancellations will be submitted to insurers within two business days of receipt.",
-        "Staff will offer practical guidance to ensure compliance with insurer requirements.",
-        "Client support will be delivered courteously and efficiently.",
+        "Applications, renewals, or cancellations will be submitted to insurers within two business days.",
+        "Staff will provide practical guidance to meet insurer requirements.",
+        "Client support will always be courteous and efficient.",
       ],
     },
     {
       title: "5. Contracted Health Funds and Remuneration",
       points: [
-        "Fees received are standard industry  and do not influence the advice or recommendations we provide.",
-        "clients don't pay for our services.",
-        "Fees support our operations, including staffing, administration, and client support.",
-        "On occasion, we may share fees with approved charities, not-for-profits, or partner organisations under formal agreements.",
+        "Fees received are standard industry payments and do not influence the advice we provide.",
+        "Clients do not pay for our services.",
+        "Fees support our operations, including client support and administration.",
+        "In some cases, we may share fees with approved charities or partner organisations.",
       ],
     },
     {
       title: "6. Disclosure of Fees",
       points: [
-        "That CompareSure is a broker paid by the insurers we represent.",
-        "That fees do not influence the impartiality of our advice.",
-        "That fees allow us to offer expert advice at no cost to most clients.",
+        "CompareSure is a broker paid by the insurers we represent.",
+        "Fees do not influence the impartiality of our recommendations.",
+        "Fees allow us to offer expert advice at no cost to most clients.",
       ],
     },
   ];
 
   const insurers = [
-    { name: "Australian Unity", desc: "One of Australia’s oldest health funds with 170+ years of history, and the sixth largest in the nation." },
-    { name: "Health Partners", desc: "A not-for-profit fund focused on value, comprehensive cover, and excellent service across Australia." },
-    { name: "AHM", desc: "Part of Medibank, serving over 500,000 Australians for more than 40 years." },
-    { name: "HCF", desc: "The largest not-for-profit health fund in Australia, operating since 1932." },
-    { name: "nib", desc: "Provides health and medical insurance to over one million residents in Australia and New Zealand." },
-    { name: "HIF", desc: "A multi-award-winning, not-for-profit fund established in 1954 with ethical, member-first service." },
-    { name: "Hunter Health Insurance (HHI)", desc: "Providing affordable health cover for over 65 years with a focus on quality and customer service." },
-    { name: "HCi", desc: "Member-owned since 1938, offering personal service and comprehensive cover options." },
-    { name: "RT Health", desc: "Serving hardworking Australians for over 135 years with tailored insurance options." },
-    { name: "Real Health Insurance", desc: "Distributed by Greenstone under the Real Insurance brand, offering 60+ years of experience." },
-    { name: "Seniors Health Insurance", desc: "Backed by nib, offering tailored hospital and extras cover for older Australians." },
-    { name: "Frank Health Insurance", desc: "A GMHBA-owned not-for-profit insurer launched in 2009, offering affordable private health cover." },
-    { name: "GMHBA", desc: "Established in 1934, providing 90+ years of trusted, community-focused health coverage." },
+    { name: "Australian Unity", desc: "One of Australia’s oldest health funds with 170+ years of history." },
+    { name: "Health Partners", desc: "A leading not-for-profit fund prioritising value and service." },
+    { name: "AHM", desc: "Part of Medibank, serving over 500,000 Australians." },
+    { name: "HCF", desc: "Australia’s largest not-for-profit health fund." },
+    { name: "nib", desc: "Providing health insurance to over one million residents." },
+    { name: "HIF", desc: "Member-focused, award-winning not-for-profit fund since 1954." },
+    { name: "Hunter Health Insurance (HHI)", desc: "Affordable health cover for 65+ years." },
+    { name: "HCi", desc: "Member-owned since 1938, offering personalised service." },
+    { name: "RT Health", desc: "Serving essential workers for over 135 years." },
+    { name: "Real Health Insurance", desc: "Distributed by Greenstone with 60+ years experience." },
+    { name: "Seniors Health Insurance", desc: "Tailored cover backed by nib." },
+    { name: "Frank Health Insurance", desc: "Affordable cover by GMHBA." },
+    { name: "GMHBA", desc: "90+ years of trusted community-focused coverage." },
   ];
 
   return (
-    <section className="max-w-7xl mx-auto section-padding-x section-padding-y text-gray-800">
-      {/* Hero Header */}
-      <div className="text-center mb-14">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-700 via-sky-600 to-blue-800 text-transparent bg-clip-text mb-5 leading-tight">
+    <section
+      className="bg-cover bg-center bg-no-repeat bg-fixed py-20 px-6 md:px-12 lg:px-24"
+      style={{
+        backgroundImage: `linear-gradient(180deg, #07192F 10%, rgba(10,20,40,0.6) 100%), url(${bgBanner})`,
+      }}
+    >
+      {/* HEADER */}
+      <div className="text-white text-center max-w-3xl mx-auto mb-20">
+        <h1 className="text-3xl md:text-5xl font-bold mb-6">
           CompareSure Fiduciary Duty Policy
         </h1>
-        <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
-          At CompareSure, we are committed to integrity and always prioritising our clients’ interests.
-          This policy outlines our duties as a health insurance broker and our dedication to transparency,
-          professionalism, and ethical standards in all interactions.
+        <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+          At CompareSure, we are committed to integrity and prioritising our clients’ interests.
+          This policy outlines our ethical responsibilities and dedication to transparency.
         </p>
       </div>
 
-      {/* Sections */}
-      <div className="space-y-10 sm:space-y-12">
-        {sections.map((section, idx) => (
+      {/* MAIN SECTIONS */}
+      <div className="space-y-3 sm:space-y-6 md:space-y-12 lg:space-y-16 max-w-6xl mx-auto">
+        {sections.map((sec, idx) => (
           <div
             key={idx}
-            className="bg-gradient-to-br from-gray-50 to-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition-all p-6 sm:p-8"
+            className="bg-[#081321]/70 p-10 rounded-xl border border-white/10 shadow-lg backdrop-blur-sm"
           >
-            <h2 className="text-xl sm:text-2xl font-semibold text-blue-700 mb-4 border-l-4 border-blue-600 pl-3">
-              {section.title}
+            <h2 className="text-xl md:text-2xl text-white font-semibold text-center mb-10">
+              {sec.title}
             </h2>
-            <ul className="list-disc list-inside space-y-2 text-gray-700 leading-relaxed text-sm sm:text-base">
-              {section.points.map((point, i) => (
-                <li key={i}>{point}</li>
-              ))}
-            </ul>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative">
+              {/* Vertical Divider */}
+              <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-white/20"></div>
+
+              {/* Left Column */}
+              <div className="space-y-4 text-gray-300 text-sm leading-relaxed">
+                {sec.points.slice(0, Math.ceil(sec.points.length / 2)).map((p, i) => (
+                  <div key={i} className="flex gap-3">
+                    <span className="w-2 h-2 rounded-full bg-blue-500 mt-2"></span>
+                    {p}
+                  </div>
+                ))}
+              </div>
+
+              {/* Right Column */}
+              <div className="space-y-4 text-gray-300 text-sm leading-relaxed">
+                {sec.points.slice(Math.ceil(sec.points.length / 2)).map((p, i) => (
+                  <div key={i} className="flex gap-3">
+                    <span className="w-2 h-2 rounded-full bg-blue-500 mt-2"></span>
+                    {p}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         ))}
       </div>
 
-      {/* Partner Insurers */}
-      <div className="mt-16">
-        <h2 className="text-2xl sm:text-3xl font-semibold text-blue-700 mb-5 text-center">
+      {/* PARTICIPATING INSURERS */}
+      <div className="mt-10 lg:mt-28 text-white">
+        <h2 className="text-center text-2xl md:text-3xl font-semibold mb-6">
           7. Participating Insurers
         </h2>
-        <p className="text-gray-700 text-center max-w-2xl mx-auto mb-10 text-sm sm:text-base leading-relaxed">
-          CompareSure collaborates with a carefully selected group of trusted health funds to ensure
-          our clients receive exceptional coverage and service.
+
+        <p className="text-center text-gray-300 max-w-2xl mx-auto mb-10 text-sm leading-relaxed">
+          We collaborate with a trusted panel of health funds to provide reliable, ethical and transparent advice.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {insurers.map((insurer, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {insurers.map((ins, i) => (
             <div
               key={i}
-              className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover:shadow-lg transition-transform hover:-translate-y-1"
+              className="bg-[#0A1A2C]/80 p-6 rounded-xl border border-white/10 shadow-md hover:shadow-lg transition"
             >
-              <h3 className="text-lg font-semibold text-blue-800 mb-2">{insurer.name}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{insurer.desc}</p>
+              <h3 className="text-lg font-semibold text-blue-300 mb-2">{ins.name}</h3>
+              <p className="text-gray-300 text-sm">{ins.desc}</p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Footer Section */}
-      <div className="mt-20 text-center border-t border-gray-200 pt-10">
-        <h2 className="text-xl sm:text-2xl font-semibold text-blue-700 mb-3">
-          Policy Review
-        </h2>
-        <p className="text-gray-700 text-sm sm:text-base mb-8 max-w-2xl mx-auto leading-relaxed">
-          This policy is reviewed periodically to ensure compliance with regulations and the highest
-          ethical standards in the health insurance industry.
+      {/* FOOTER */}
+      <div className="mt-20 text-center text-gray-300">
+        <h2 className="text-xl font-semibold text-white mb-3">Policy Review</h2>
+        <p className="max-w-2xl mx-auto text-sm leading-relaxed mb-10">
+          This policy is reviewed regularly to maintain compliance and uphold CompareSure’s ethical standards.
         </p>
 
-        <h2 className="text-xl sm:text-2xl font-semibold text-blue-700 mb-3">
-          Contact Information
-        </h2>
-        <p className="text-gray-700 text-sm sm:text-base">
-          For questions regarding this policy or our fiduciary responsibilities, please visit{" "}
+        <h2 className="text-xl font-semibold text-white mb-3">Contact Information</h2>
+        <p className="text-sm">
+          For questions, visit{" "}
           <a
             href="https://www.comparesure.com.au"
+            className="text-blue-400 underline"
             target="_blank"
             rel="noreferrer"
-            className="text-blue-600 font-medium underline hover:text-blue-800 transition-colors"
           >
             www.comparesure.com.au
           </a>
-          .
         </p>
       </div>
     </section>

@@ -6,7 +6,7 @@ const ContactUs = () => {
   const { pathname } = useLocation(); // ✅ destructure pathname correctly
 
   return (
-    <div className="bg-[#1F1F1F]/80 py-14 flex items-center justify-center flex-col px-4 gap-4 text-center">
+    <div className="bg-[#0A0A0A]/70 section-padding-x py-14 flex items-center justify-center flex-col px-4 gap-4 text-center">
       <Title level="title24" className="text-white">Contact Us</Title>
 
       {pathname === "/terms-of-service" ? (

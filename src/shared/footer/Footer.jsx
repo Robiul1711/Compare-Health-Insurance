@@ -183,7 +183,7 @@ Making health insurance simple, transparent, and stress-free.
                   <span>{"0478 711 733"}</span>
                 </li>
                 <li className="flex items-center gap-1 ">
-                  <Mail className="size-6" />
+                  <Mail className="size-5" />
                   <span>
                     {data?.system_settings?.email || "info@comparesure.com.au"}
                   </span>

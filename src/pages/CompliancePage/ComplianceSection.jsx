@@ -35,7 +35,7 @@ export default function ComplianceSection() {
   ];
 
   return (
-    <div className="bg-[#1F1F1F]/80 py-14 section-padding-x">
+    <div className="bg-[#0A0A0A]/70 py-14 section-padding-x ">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
         {/* Vertical divider lines */}
         <div className="hidden md:block absolute left-1/3 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white to-transparent"></div>
