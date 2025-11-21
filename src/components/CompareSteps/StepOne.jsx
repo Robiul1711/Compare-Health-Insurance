@@ -35,9 +35,17 @@ export default function StepOne() {
           <Title level="title48">
             What kind of health cover do you need?
           </Title>
-          <p className="text-gray-600  mt-4">
-            Pick the option that best fits you. Don't worry — you can change later.
-          </p>
+   <div className="px-6 max-w-4xl mx-auto mt-6 mb-4">
+  <div className="bg-[#FFF8E5] border-l-4 border-[#FBBF24] text-[#8A6D1A] p-4 rounded-md shadow-sm text-sm md:text-base leading-relaxed">
+    <h4 className="font-semibold text-[#B45309] mb-1">Disclaimer</h4>
+    <p>
+      By continuing, you consent to CompareSure collecting and using your personal
+      information to compare policies, find the most suitable options for you, and 
+      contact you by phone or email regarding your enquiry.
+    </p>
+  </div>
+</div>
+
         </div>
 
         {/* Options Grid */}
