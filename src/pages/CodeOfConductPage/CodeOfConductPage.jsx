@@ -22,14 +22,14 @@ const CodeOfConductPage = () => {
               <MdVerifiedUser className="text-3xl" />
             </span>
             <Title level="title48" className="py-4">
-             Private health intermediary code of conduct
+              Private health intermediary code of conduct
             </Title>
             <Title level="title20">Last updated: 26/10/25</Title>
             <Title level="title20" className="py-4">
-              At CompareSure, we proudly support and follow the Private Health
-              Insurance Code of Conduct. <br /> This Code helps ensure that
-              customers receive honest, respectful, and transparent service when
-              comparing health insurance options.
+              At CompareSure, We proudly follow the Private Health Insurance
+              Intermediaries Code of Conductt. <br /> This Code helps ensure
+              that customers receive honest, respectful, and transparent service
+              when comparing health insurance options.
             </Title>
           </div>
         </div>
