@@ -22,7 +22,7 @@ const CodeOfConductPage = () => {
               <MdVerifiedUser className="text-3xl" />
             </span>
             <Title level="title48" className="py-4">
-               Private Health Insurance Intermediaries Code of Conduct
+             Private health intermediary code of conduct
             </Title>
             <Title level="title20">Last updated: 26/10/25</Title>
             <Title level="title20" className="py-4">
