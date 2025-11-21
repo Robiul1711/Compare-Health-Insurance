@@ -25,6 +25,7 @@ const DisputeResolutionsPolicyPage = () => {
     {
       title: "3. How to Raise a Concern",
       points: [
+        "Raise the matter with the health fund directly." ,
         "Email: complaints@comparesure.com.au",
         "Post: CompareSure, 2/290 Boundary Street, Spring Hill QLD 4000",
         "Phone: Call our director on 0478711733",

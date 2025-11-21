@@ -244,10 +244,15 @@ const extrasProcedures = [
 
         {/* Summary Section */}
         {selectedCoverage && (
-          <div className="mt-8 text-center">
+          <div className="mt-4 text-center">
             <button className="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg">
               Continue ({selectedProcedures.length} selected)
             </button>
+            <div className="mt-4">
+              <h1 className="font-semibold text-Secondary">Disclaimer: By continuing, you consent to CompareSure collecting and using your personal information to compare
+policies, find the most suitable options for you, and contact you by phone or email regarding your
+enquiry.</h1>
+            </div>
           </div>
         )}
       </div>

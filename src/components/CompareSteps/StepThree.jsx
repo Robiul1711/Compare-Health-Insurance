@@ -29,7 +29,7 @@ export default function StepThree() {
             A few quick details about you.
           </h1>
           <p className="text-gray-600 text-lg">
-            This helps us show the best options for your situation.
+            This helps us show the suitable option for your situation.
           </p>
         </div>
 

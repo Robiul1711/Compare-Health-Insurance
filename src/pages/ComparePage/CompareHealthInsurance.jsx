@@ -65,7 +65,7 @@ const CompareHealthInsurance = () => {
         <div className="mt-10">{steps[current].content}</div>
 
         {/* Buttons */}
-        <div className={`flex items-center justify-center gap-5 mt-8 ${current === steps.length - 1 ? "hidden" : ""}`}>
+        <div className={`flex items-center justify-center gap-5 mt-4 ${current === steps.length - 1 ? "hidden" : ""}`}>
           {current > 0 && (
             <button
               onClick={prev}
