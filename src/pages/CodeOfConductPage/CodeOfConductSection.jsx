@@ -26,7 +26,7 @@ export default function CodeOfConductSection() {
     },
     {
       title: "Our Partners",
-      //   description: "We may share your details only with:",
+        description: "Our partners are the funds which work under the private health insurance code of conduct. These include:",
       items: [
         "We only work with registered Australian health funds that also comply with the Private Health Insurance Intermediaries Code of Conduct.",
         "This ensures that every comparison we provide meets industry and ethical standards.",

@@ -107,6 +107,10 @@ export default function FindPlan() {
         <p ref={smallTextRef} className="text-Secondary font-semibold">
           No commitment required • Takes less than 2 minutes
         </p>
+        <div ref={smallTextRef} className="mt-4 ">
+          <h1 className="text-Secondary font-semibold">Disclaimer: We need this information for our
+broker to assist in finding the right policy with accurate pricing</h1>
+        </div>
       </div>
     </div>
   );
