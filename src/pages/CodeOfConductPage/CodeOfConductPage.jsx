@@ -27,7 +27,7 @@ const CodeOfConductPage = () => {
             <Title level="title20">Last updated: 26/10/25</Title>
             <Title level="title20" className="py-4">
               At CompareSure, We proudly follow the Private Health Insurance
-              Intermediaries Code of Conductt. <br /> This Code helps ensure
+              Intermediaries Code of Conduct. <br /> This Code helps ensure
               that customers receive honest, respectful, and transparent service
               when comparing health insurance options.
             </Title>
