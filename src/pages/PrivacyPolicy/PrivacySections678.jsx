@@ -29,7 +29,7 @@ export default function PrivacySections678() {
 
         <div className="relative z-10">
           {sections.map((sec, idx) => (
-            <section key={sec.id} className="py-14 section-padding-x">
+            <section key={sec.id} className="py-6 lg:py-8 xl:py-14 section-padding-x">
               {/* centered title */}
               <h2 className="text-center text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-8">
                 {sec.title}

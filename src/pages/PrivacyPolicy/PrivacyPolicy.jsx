@@ -6,6 +6,7 @@ import { MdVerifiedUser } from "react-icons/md";
 import PrivacyInfoSection from "./PrivacyInfoSection";
 import Section2and3 from "./Section2and3";
 import PrivacySections678 from "./PrivacySections678";
+import Section45 from "./Section45";
 
 const PrivacyPolicy = () => {
   return (
@@ -41,13 +42,24 @@ const PrivacyPolicy = () => {
               services, you consent to the practices described in this Privacy
               Policy
             </Title>
+            {/* CLICKABLE DOCUMENT LINK BUTTON */}
+<a
+  href="/public/docx/privacy.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-4 inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition"
+>
+  View Full Privacy Policy Document
+</a>
+
           </div>
         </div>
 
         {/* Bottom Sections */}
-        <div className="w-full flex flex-col ">
+        <div className="w-full flex flex-col  ">
           <PrivacyInfoSection />
           <Section2and3 />
+          <Section45 />
           <PrivacySections678 />
           <ContactUs />
         </div>
