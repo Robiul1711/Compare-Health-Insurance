@@ -1,16 +1,6 @@
 export default function Section2and3() {
   return (
-    <div className="bg-[#0A0A0A]/70 py-14 section-padding-x">
-
-      {/* TWO COLUMN TITLE */}
-      <div className="grid grid-cols-1 md:grid-cols-2 text-center mb-14">
-        <h2 className="text-2xl md:text-3xl font-semibold text-white">
-          2. How We Use Your Information
-        </h2>
-        <h2 className="text-2xl md:text-3xl font-semibold text-white mt-10 md:mt-0">
-          3. Information Sharing and Disclosure
-        </h2>
-      </div>
+    <div className="bg-[#0A0A0A]/70 py-6 lg:py-8 xl:py-14 section-padding-x">
 
       {/* TWO COLUMN CONTENT */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 relative">
@@ -20,6 +10,9 @@ export default function Section2and3() {
 
         {/* LEFT COLUMN */}
         <div className="text-gray-300 space-y-6 leading-relaxed">
+               <h2 className="text-2xl md:text-3xl font-semibold text-white">
+          2. How We Use Your Information
+        </h2>
           <p className="text-sm">
             We use the information collected to:
           </p>
@@ -43,6 +36,9 @@ export default function Section2and3() {
 
         {/* RIGHT COLUMN */}
         <div className="text-gray-300 space-y-6 leading-relaxed md:pl-10">
+                <h2 className="text-2xl md:text-3xl font-semibold text-white mt-10 md:mt-0">
+          3. Information Sharing and Disclosure
+        </h2>
           <p className="text-sm font-medium">
             We respect your privacy and will never sell or trade your personal information
           </p>
