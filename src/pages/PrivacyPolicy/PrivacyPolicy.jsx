@@ -56,7 +56,7 @@ const PrivacyPolicy = () => {
         </div>
 
         {/* Bottom Sections */}
-        <div className="w-full flex flex-col ">
+        <div className="w-full flex flex-col  ">
           <PrivacyInfoSection />
           <Section2and3 />
           <Section45 />

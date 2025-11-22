@@ -1,6 +1,6 @@
 export default function PrivacyInfoSection() {
   return (
-    <div className="bg-[#0A0A0A]/70 py-14 section-padding-x">
+    <div className="bg-[#0A0A0A]/70 py-6 lg:py-14 section-padding-x">
       {/* SECTION TITLE */}
       <h2 className="text-center text-2xl md:text-3xl font-semibold text-white mb-14">
         1. Information We Collect
@@ -64,7 +64,7 @@ export default function PrivacyInfoSection() {
       {/* BOTTOM TEXT */}
       <p className="text-center text-gray-300 text-sm mt-14 leading-relaxed max-w-4xl mx-auto">
         We may also collect non-personal information through website analytics such as browser type, device type,
-        and usage data via cookies (see Section 6).
+        and usage data via cookies (see Section 7).
       </p>
     </div>
   );
