@@ -48,7 +48,7 @@ const FundedBy = () => {
 
       {/* Button */}
       <Link to="/fund" className="py-2 sm:py-3 px-10 rounded-full border border-Primary text-Primary font-medium shadow-sm hover:bg-Primary hover:text-white transition-all duration-300">
-        View all 12 health funds we compare
+        View all 13 health funds we compare
       </Link>
 <div className=" sm:bg-Primary/10 rounded-2xl sm:p-6 sm:py-10  sm:shadow-sm sm:border sm:border-gray-100">
   <h3 className="text-sm sm:text-base leading-relaxed text-gray-700 font-medium ">
