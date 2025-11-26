@@ -69,6 +69,7 @@ export default function FiduciaryDutyPolicyPage() {
     { name: "Seniors Health Insurance", desc: "Tailored cover backed by nib." },
     { name: "Frank Health Insurance", desc: "Affordable cover by GMHBA." },
     { name: "GMHBA", desc: "90+ years of trusted community-focused coverage." },
+    { name: "Bupa", desc: "Bupa delivers trusted, high-quality health cover designed to help you live a longer, healthier, happier life" },
   ];
 
   return (

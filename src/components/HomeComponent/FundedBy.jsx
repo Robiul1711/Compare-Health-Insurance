@@ -15,10 +15,11 @@ import image9 from "@/assets/images/b9.png";
 import image10 from "@/assets/images/b10.png";
 import image11 from "@/assets/images/b11.png";
 import image12 from "@/assets/images/b12.png";
+import image13 from "@/assets/images/b13.jpg";
 import { Link } from "react-router-dom";
 
 const FundedBy = () => {
-  const brands = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12];
+  const brands = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13];
 
   return (
     <section className="flex flex-col items-center text-center gap-16 ">

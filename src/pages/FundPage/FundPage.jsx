@@ -15,6 +15,7 @@ import image9 from "@/assets/images/b9.png";
 import image10 from "@/assets/images/b10.png";
 import image11 from "@/assets/images/b11.png";
 import image12 from "@/assets/images/b12.png";
+import image13 from "@/assets/images/b13.jpg";
 import FindPlan from "@/components/HomeComponent/FindPlan";
 
 const FundPage = () => {
@@ -102,6 +103,13 @@ const FundPage = () => {
       name: "nib",
       Description:
         " nib is one of Australia's fastest-growing health insurers, providing health and medical insurance to over one million Australian and New Zealand residents. They also cover more than 130,000 international students and workers in Australia.",
+    },
+    {
+      id: 13,
+      image: image13,
+      name: "Bupa",
+      Description:
+        "Bupa is a health and care company committed to helping our customers live longer, healthier, happier lives. As one of Australia's leading healthcare organisations, we offer a broad range of private health cover options from just the basics to our top level of cover, that give you more of the features and benefits you're looking for. We have cover for singles, couples and families, so no matter where you are in life, we've got something to suit your needs. Nothing compares to quality health insurance. And that's why nothing compares to being with Bupa.",
     },
   ];
 
