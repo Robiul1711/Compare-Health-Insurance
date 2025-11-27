@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Quote } from 'lucide-react';
+import { useApiQuery } from '@/hooks/allCMS';
 
 const testimonials = [
   {
@@ -28,6 +29,12 @@ const testimonials = [
 ];
 
 export default function TestimonialSlider() {
+  const { data:testimonialsData, isLoading, error } = useApiQuery({
+    queryKey: "testimonials",
+    url: "/testimonials",
+    
+  });
+  console.log(testimonialsData?.data)
   return (
   
       <div className="w-full ">
@@ -40,7 +47,7 @@ export default function TestimonialSlider() {
           autoplay={{ delay: 5000, disableOnInteraction: false }}
           className="rounded-3xl"
         >
-          {testimonials.map((testimonial, index) => (
+          {testimonialsData?.data?.map((testimonial, index) => (
             <SwiperSlide key={index}>
               <div className="relative bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl shadow-2xl overflow-hidden">
                 {/* Decorative background pattern */}
@@ -57,15 +64,15 @@ export default function TestimonialSlider() {
                   </div>
 
                   {/* Quote Text */}
-                  <p className="text-white sm:text-xl md:text-3xl font-medium text-center leading-relaxed mb-6 sm:mb-12 max-w-3xl mx-auto">
-                    {testimonial.quote}
+                  <p className="text-white sm:text-xl md:text-3xl font-medium text-center leading-relaxed mb-6 sm:mb-12 max-w-3xl mx-auto" dangerouslySetInnerHTML={{__html:testimonial?.description}}>
+                   
                   </p>
 
                   {/* Author Info */}
                   <div className="flex items-center justify-center gap-4">
                     <div className="w-14 h-14 rounded-full overflow-hidden border-3 border-white shadow-lg">
                       <img 
-                        src={testimonial.avatar} 
+                        src={testimonial.image} 
                         alt={testimonial.name}
                         className="w-full h-full object-cover bg-white"
                       />
@@ -75,7 +82,7 @@ export default function TestimonialSlider() {
                         {testimonial.name}
                       </h3>
                       <p className="text-blue-100 text-sm">
-                        {testimonial.title}
+                        {testimonial.designation}
                       </p>
                     </div>
                   </div>

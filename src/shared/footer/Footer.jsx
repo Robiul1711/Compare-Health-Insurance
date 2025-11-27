@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import logo from "@/assets/Images/logo.png";
+import { useApiQuery } from "@/hooks/allCMS";
 import {
   Facebook,
   Instagram,
@@ -22,6 +23,14 @@ const navLinks = [
 ];
 
 const Footer = ({ data }) => {
+  const {
+    data: socialLinks,
+    isLoading,
+    error,
+  } = useApiQuery({
+    queryKey: "social-links",
+    url: "/social-links/get",
+  });
   return (
     <footer className="section-padding-x py-5 sm:py-6 lg:py-8 xl:py-10">
       <div className="flex flex-col md:flex-row justify-between w-full gap-10">
@@ -29,55 +38,67 @@ const Footer = ({ data }) => {
         <div className="md:max-w-[40%] ">
           <img src={logo} alt="Company Logo" className=" w-auto mb-5" />
           <p className=" leading-relaxed">
-Making health insurance simple, transparent, and stress-free.
+            Making health insurance simple, transparent, and stress-free.
           </p>
 
           <p className="font-semibold text-lg  mt-8 mb-3">Follow us</p>
-      <div className="flex space-x-4">
-  <a
-    href={data?.social_links?.facebook_link || "https://facebook.com"}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
-  >
-    <Facebook className="size-5 md:size-6 text-Primary" />
-  </a>
+     <div className="flex space-x-4">
 
-  <a
-    href={data?.social_links?.instagram_link || "https://instagram.com"}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
-  >
-    <Instagram className="size-5 md:size-6 text-Primary" />
-  </a>
+  {socialLinks?.data?.facebook_link && (
+    <a
+      href={socialLinks.data.facebook_link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
+    >
+      <Facebook className="size-5 md:size-6 text-Primary" />
+    </a>
+  )}
 
-  <a
-    href={data?.social_links?.linkedin_link || "https://linkedin.com"}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
-  >
-    <Linkedin className="size-5 md:size-6 text-Primary" />
-  </a>
+  {socialLinks?.data?.instagram_link && (
+    <a
+      href={socialLinks.data.instagram_link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
+    >
+      <Instagram className="size-5 md:size-6 text-Primary" />
+    </a>
+  )}
 
-  <a
-    href={data?.social_links?.youtube_link || "https://youtube.com"}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
-  >
-    <Youtube className="size-5 md:size-6 text-Primary" />
-  </a>
+  {socialLinks?.data?.linkedin_link && (
+    <a
+      href={socialLinks.data.linkedin_link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
+    >
+      <Linkedin className="size-5 md:size-6 text-Primary" />
+    </a>
+  )}
 
-  <a
-    href={data?.social_links?.twitter_link || "https://twitter.com"}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
-  >
-    <Twitter className="size-5 md:size-6 text-Primary" />
-  </a>
+  {socialLinks?.data?.youtube_link && (
+    <a
+      href={socialLinks.data.youtube_link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
+    >
+      <Youtube className="size-5 md:size-6 text-Primary" />
+    </a>
+  )}
+
+  {socialLinks?.data?.twitter_link && (
+    <a
+      href={socialLinks.data.twitter_link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-2 bg-Primary/10 rounded-[10px] hover:bg-Primary/20 transition-colors"
+    >
+      <Twitter className="size-5 md:size-6 text-Primary" />
+    </a>
+  )}
+
 </div>
 
         </div>
@@ -189,7 +210,6 @@ Making health insurance simple, transparent, and stress-free.
                   </span>
                 </li>
 
-
                 {/* <li className="flex items-center gap-2">
                   <CiLocationOn className="size-7" />
                   {data?.system_settings?.address ||
@@ -203,7 +223,9 @@ Making health insurance simple, transparent, and stress-free.
 
       {/* Copyright */}
       <div className="flex flex-col sm:flex-row justify-between items-center border-t border-gray-200 mt-5 sm:mt-10 pt-5  text-sm">
-        <p className="text-Primary font-medium">© 2025 CompareSure. All rights reserved.</p>
+        <p className="text-Primary font-medium">
+          © 2025 CompareSure. All rights reserved.
+        </p>
         <p className=" cursor-pointer transition-colors">Trustpilot Reviews</p>
       </div>
     </footer>

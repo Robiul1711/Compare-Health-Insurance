@@ -17,8 +17,13 @@ import image11 from "@/assets/images/b11.png";
 import image12 from "@/assets/images/b12.png";
 import image13 from "@/assets/images/b13.jpg";
 import FindPlan from "@/components/HomeComponent/FindPlan";
+import {useApiQuery} from "@/hooks/allCMS";
 
 const FundPage = () => {
+const { data:funders, isLoading, error } = useApiQuery({
+  queryKey: "funders",
+  url: "/partners/get",
+});
   const brands = [
     {
       id: 1,
@@ -153,7 +158,7 @@ const FundPage = () => {
 
         {/* Brand Grid */}
         <div className="mt-10 sm:mt-12 md:mt-16 grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 place-items-center">
-          {brands.map((brand) => (
+          {funders?.data?.map((brand) => (
             <div
               key={brand.id}
               className="relative flex flex-col items-center text-center"
@@ -183,10 +188,10 @@ const FundPage = () => {
                       className="w-16 h-10 object-contain mb-2 mx-auto"
                     />
                     <h3 className="mb-1 text-lg font-bold dark:text-[#abc2d3] text-gray-700 mt-4">
-                      {activeBrand.name}
+                      {activeBrand.title}
                     </h3>
                     <p className="text-sm text-Secondary font-bold">
-                      {activeBrand.Description}
+                      {activeBrand.description}
                     </p>
                     <button
                       className="mt-3 text-sm text-blue-600 font-medium"
@@ -226,10 +231,10 @@ const FundPage = () => {
                   className="w-16 h-10 object-contain mb-2 mx-auto"
                 />
                 <h3 className="mb-1 text-lg font-bold dark:text-[#abc2d3] text-gray-700 mt-4">
-                  {hoveredBrand.name}
+                  {hoveredBrand.title}
                 </h3>
                 <p className="text-sm text-Secondary font-bold">
-                  {hoveredBrand.Description}
+                  {hoveredBrand.description}
                 </p>
               </div>
             </motion.div>

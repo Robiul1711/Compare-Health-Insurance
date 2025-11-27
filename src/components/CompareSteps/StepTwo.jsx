@@ -1,32 +1,28 @@
-import React, { useState } from 'react';
-import { Building2, Heart } from 'lucide-react';
+import React from "react";
+import { Building2, Heart } from "lucide-react";
 import { LiaToothSolid } from "react-icons/lia";
-import Title from '../common/Title';
-const StepTwo = () => {
-  const [selectedCoverage, setSelectedCoverage] = useState('');
-  const [selectedProcedures, setSelectedProcedures] = useState([]);
+import Title from "../common/Title";
+import { useFormContext } from "react-hook-form";
 
+const StepTwo = () => {
+  const {
+    watch,
+    setValue,
+    formState: { errors },
+  } = useFormContext();
+
+  // RHF watched values
+  const selectedCoverage = watch("insurance_cover", "");
+  const selectedProcedures = watch("procedure", []);
+
+  // Coverage Options
   const coverageOptions = [
-    {
-      id: 'hospital',
-      title: 'Hospital Cover',
-      subtitle: 'For private hospitals and doctors',
-      icon: Building2,
-    },
-    {
-      id: 'extras',
-      title: 'Extras Cover',
-      subtitle: 'For dental, glasses, and physio',
-      icon: Heart,
-    },
-    {
-      id: 'both',
-      title: 'Hospital + Extras',
-      subtitle: 'Both hospital and extras',
-      icon: LiaToothSolid,
-    },
+    { id: "hospital", title: "Hospital Cover", subtitle: "For private hospitals and doctors", icon: Building2 },
+    { id: "extras", title: "Extras Cover", subtitle: "For dental, glasses, and physio", icon: Heart },
+    { id: "both", title: "Hospital + Extras", subtitle: "Both hospital and extras", icon: LiaToothSolid },
   ];
 
+  // Lists
   const hospitalProcedures = [
     { id: 'rehabilitation', label: 'Rehabilitation' },
     { id: 'ear-nose-throat', label: 'Ear, nose and throat' },
@@ -92,103 +88,88 @@ const extrasProcedures = [
   { id: 'speech-therapy', label: 'Speech Therapy' },
 ];
 
-  const toggleProcedure = (procedureId) => {
-    setSelectedProcedures(prev =>
-      prev.includes(procedureId)
-        ? prev.filter(id => id !== procedureId)
-        : [...prev, procedureId]
-    );
-  };
 
+  // Select insurance type
   const handleCoverageSelect = (coverageId) => {
-    setSelectedCoverage(coverageId);
-    setSelectedProcedures([]);
+    setValue("insurance_cover", coverageId, { shouldValidate: true });
+    setValue("procedure", []); // reset procedure list
   };
 
-  const shouldShowHospitalProcedures = selectedCoverage === 'hospital' || selectedCoverage === 'both';
-  const shouldShowExtrasProcedures = selectedCoverage === 'extras' || selectedCoverage === 'both';
+  // Toggle the procedure list
+  const toggleProcedure = (procedureId) => {
+    let updated = [];
+
+    if (selectedProcedures.includes(procedureId)) {
+      updated = selectedProcedures.filter((id) => id !== procedureId);
+    } else {
+      updated = [...selectedProcedures, procedureId];
+    }
+
+    setValue("procedure", updated, { shouldValidate: true });
+  };
+
+  const showHospital = selectedCoverage === "hospital" || selectedCoverage === "both";
+  const showExtras = selectedCoverage === "extras" || selectedCoverage === "both";
 
   return (
-    <div className=" p-4 sm:p-8">
+    <div className="p-4 sm:p-8">
       <div className="max-w-6xl mx-auto">
+
         {/* Header */}
         <div className="text-center mb-6 sm:mb-12">
-          <Title level="title48">
-            What do you want your insurance to cover?
-          </Title>
-          <p className="text-gray-600">
-            We'll find plans that match what you really need.
-          </p>
+          <Title level="title48">What do you want your insurance to cover?</Title>
+          <p className="text-gray-600">We'll match you with suitable plans.</p>
+
+          {/* ERROR for insurance_cover */}
+          {errors.insurance_cover && (
+            <p className="text-red-500 mt-2">{errors.insurance_cover.message}</p>
+          )}
         </div>
 
-        {/* Coverage Options */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6 sm:mb-12">
+        {/* Coverage Selection */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {coverageOptions.map((option) => {
             const Icon = option.icon;
             const isSelected = selectedCoverage === option.id;
+
             return (
               <button
                 key={option.id}
+                type="button"
                 onClick={() => handleCoverageSelect(option.id)}
-                className={`p-6 sm:p-8 rounded-2xl border-2 transition-all duration-300 hover:shadow-lg ${
-                  isSelected
-                    ? 'border-blue-500 bg-blue-50 shadow-md'
-                    : 'border-gray-200 bg-white hover:border-blue-300'
+                className={`p-6 rounded-2xl border-2 transition duration-300 ${
+                  isSelected ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white hover:border-blue-300"
                 }`}
               >
-                <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center ${
-                  isSelected ? 'bg-blue-100' : 'bg-gray-100'
-                }`}>
-                  <Icon className={`w-8 h-8 ${isSelected ? 'text-blue-600' : 'text-gray-600'}`} />
+                <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center 
+                  ${isSelected ? "bg-blue-100" : "bg-gray-100"}`}>
+                  <Icon className={`w-8 h-8 ${isSelected ? "text-blue-600" : "text-gray-600"}`} />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                  {option.title}
-                </h3>
+                <h3 className="text-xl font-semibold text-gray-800">{option.title}</h3>
                 <p className="text-sm text-gray-600">{option.subtitle}</p>
               </button>
             );
           })}
         </div>
 
-        {/* Hospital Procedures Section */}
-        {shouldShowHospitalProcedures && (
-          <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 mb-8">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-gray-800 mb-2">
-                Choose the hospital procedures
-              </h2>
-              <p className="text-gray-600">you are interested in</p>
-            </div>
+        {/* Hospital Procedures */}
+        {showHospital && (
+          <div className="bg-white shadow-lg rounded-2xl p-8 mb-10">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">Hospital Procedures</h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {hospitalProcedures.map((procedure) => {
-                const isSelected = selectedProcedures.includes(procedure.id);
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {hospitalProcedures.map((p) => {
+                const isSelected = selectedProcedures.includes(p.id);
+
                 return (
                   <button
-                    key={procedure.id}
-                    onClick={() => toggleProcedure(procedure.id)}
-                    className={`p-4 rounded-lg border-2 text-left transition-all duration-200 hover:border-blue-400 ${
-                      isSelected
-                        ? 'border-blue-500 bg-blue-50'
-                        : 'border-gray-200 bg-white'
-                    }`}
+                    key={p.id}
+                    type="button"
+                    onClick={() => toggleProcedure(p.id)}
+                    className={`p-4 border-2 rounded-lg text-left transition 
+                      ${isSelected ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white"}`}
                   >
-                    <div className="flex items-start gap-3">
-                      <div className={`flex-shrink-0 w-5 h-5 mt-0.5 rounded border-2 flex items-center justify-center ${
-                        isSelected
-                          ? 'bg-blue-500 border-blue-500'
-                          : 'bg-white border-gray-300'
-                      }`}>
-                        {isSelected && (
-                          <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                          </svg>
-                        )}
-                      </div>
-                      <span className="text-sm text-gray-700 whitespace-pre-line leading-snug">
-                        {procedure.label}
-                      </span>
-                    </div>
+                    <span className="text-gray-700">{p.label}</span>
                   </button>
                 );
               })}
@@ -196,45 +177,24 @@ const extrasProcedures = [
           </div>
         )}
 
-        {/* Extras Procedures Section */}
-        {shouldShowExtrasProcedures && (
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-gray-800 mb-2">
-                Choose the extras services
-              </h2>
-              <p className="text-gray-600">you are interested in</p>
-            </div>
+        {/* Extras Procedures */}
+        {showExtras && (
+          <div className="bg-white shadow-lg rounded-2xl p-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">Extras Procedures</h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {extrasProcedures.map((procedure) => {
-                const isSelected = selectedProcedures.includes(procedure.id);
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {extrasProcedures.map((p) => {
+                const isSelected = selectedProcedures.includes(p.id);
+
                 return (
                   <button
-                    key={procedure.id}
-                    onClick={() => toggleProcedure(procedure.id)}
-                    className={`p-4 rounded-lg border-2 text-left transition-all duration-200 hover:border-blue-400 ${
-                      isSelected
-                        ? 'border-blue-500 bg-blue-50'
-                        : 'border-gray-200 bg-white'
-                    }`}
+                    key={p.id}
+                    type="button"
+                    onClick={() => toggleProcedure(p.id)}
+                    className={`p-4 border-2 rounded-lg text-left transition 
+                      ${isSelected ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white"}`}
                   >
-                    <div className="flex items-start gap-3">
-                      <div className={`flex-shrink-0 w-5 h-5 mt-0.5 rounded border-2 flex items-center justify-center ${
-                        isSelected
-                          ? 'bg-blue-500 border-blue-500'
-                          : 'bg-white border-gray-300'
-                      }`}>
-                        {isSelected && (
-                          <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                          </svg>
-                        )}
-                      </div>
-                      <span className="text-sm text-gray-700">
-                        {procedure.label}
-                      </span>
-                    </div>
+                    <span className="text-gray-700">{p.label}</span>
                   </button>
                 );
               })}
@@ -242,18 +202,9 @@ const extrasProcedures = [
           </div>
         )}
 
-        {/* Summary Section */}
-        {selectedCoverage && (
-          <div className="mt-4 text-center">
-            <button className="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg">
-              Continue ({selectedProcedures.length} selected)
-            </button>
-            {/* <div className="mt-4">
-              <h1 className="font-semibold text-Secondary">Disclaimer: By continuing, you consent to CompareSure collecting and using your personal information to compare
-policies, find the most suitable options for you, and contact you by phone or email regarding your
-enquiry.</h1>
-            </div> */}
-          </div>
+        {/* ERROR for procedure */}
+        {errors.procedure && (
+          <p className="text-red-500 text-center mt-4">{errors.procedure.message}</p>
         )}
       </div>
     </div>

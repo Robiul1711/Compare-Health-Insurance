@@ -40,13 +40,9 @@ const ContactPage = () => {
 
         {/* Contact Cards */}
         <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 sm:mt-10 md:mt-16">
-         
-            <GetInTouch />
-       
+          <GetInTouch />
 
-      
-            <MessageForm />
-       
+          <MessageForm />
         </div>
       </section>
 

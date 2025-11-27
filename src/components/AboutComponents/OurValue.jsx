@@ -2,8 +2,15 @@ import React from 'react';
 import { FileText, Tag, Headphones, Globe } from 'lucide-react';
 import Title from '../common/Title';
 import { AccessibilityIcon, SimplicityIcon, SupportIcon, TrustIcon } from '../Icon';
+import {  useApiQuery } from '@/hooks/allCMS';
 
 export default function OurValue() {
+  // const {ourvalues, isLoading, error} = ourValuesQuery();
+  // console.log(ourvalues?.data);
+  const { data:ourvalues, isLoading, error } = useApiQuery({
+  queryKey: "ourvalues",
+  url: "/ourvalues/get",
+});
   const values = [
     {
       icon: SimplicityIcon ,
@@ -37,8 +44,8 @@ export default function OurValue() {
         <Title level="title48" className="text-center">Our Value</Title>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6  sm:gap-8 mt-6 md:mt-12">
-          {values.map((value, index) => {
-            const Icon = value.icon;
+          {ourvalues?.data?.map((value, index) => {
+            // const Icon = value.icon;
             return (
               <div
                 key={index}
@@ -47,7 +54,7 @@ export default function OurValue() {
               >
                 <div className="flex justify-center mb-6">
                   <div className="size-16 sm:size-18 md:size-20 lg:size-24 bg-Primary/5 rounded-full flex items-center justify-center">
-                    <Icon className="size-10 sm:size-12 md:size-14 lg:size-auto" />
+                  <img src={value?.image} alt="" />
                   </div>
                 </div>
                 
@@ -56,7 +63,7 @@ export default function OurValue() {
                 </h3>
                 
                 <p className="font-semibold text-Secondary  text-center leading-relaxed">
-                  {value.description}
+                  {value.sub_title}
                 </p>
               </div>
             );
