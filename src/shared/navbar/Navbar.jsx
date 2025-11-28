@@ -3,8 +3,17 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "@/assets/images/logo.png";
 import CommonButton from "@/components/common/CommonButton";
 import { IoCallOutline, IoClose, IoMenu } from "react-icons/io5";
+import { useApiQuery } from "@/hooks/allCMS";
 
 const Navbar = () => {
+  const {
+    data: homePageData,
+    isLoading,
+    error,
+  } = useApiQuery({
+    queryKey: "homepage-settings",
+    url: "/homepage-settings",
+  });
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -36,13 +45,13 @@ const Navbar = () => {
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
-    
+
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isMobileMenuOpen]);
 
@@ -91,7 +100,13 @@ const Navbar = () => {
           </ul>
 
           {/* Call Button */}
-          <CommonButton variant="black" className="flex items-center gap-2">
+          <CommonButton
+            variant="black"
+            className="flex items-center gap-2"
+            onClick={() =>
+              (window.location.href = `tel:${homePageData?.data?.call_number}`)
+            }
+          >
             <IoCallOutline />
             Call Now
           </CommonButton>
@@ -111,16 +126,18 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <>
           {/* Backdrop Blur */}
-          <div 
+          <div
             className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 lg:hidden"
             onClick={closeMobileMenu}
           />
-          
+
           {/* Sidebar */}
-          <div className={`
+          <div
+            className={`
             fixed top-0 right-0 h-full w-80 max-w-full bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out lg:hidden
-            ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}
-          `}>
+            ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}
+          `}
+          >
             {/* Sidebar Header */}
             <div className="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200">
               <Link to="/" onClick={closeMobileMenu}>
@@ -160,9 +177,11 @@ const Navbar = () => {
 
               {/* Mobile Call Button */}
               <div className="mt-8 pt-6 border-t border-gray-200">
-                <CommonButton 
-                  variant="black" 
-                  onClick={closeMobileMenu}
+                <CommonButton
+                  variant="black"
+                  onClick={() =>
+                    (window.location.href = `tel:${homePageData?.data?.call_number}`)
+                  }
                 >
                   <IoCallOutline />
                   Call Now

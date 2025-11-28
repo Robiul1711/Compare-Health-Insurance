@@ -34,7 +34,6 @@ export default function TestimonialSlider() {
     url: "/testimonials",
     
   });
-  console.log(testimonialsData?.data)
   return (
   
       <div className="w-full ">

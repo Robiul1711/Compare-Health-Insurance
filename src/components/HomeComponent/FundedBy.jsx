@@ -41,16 +41,18 @@ const { data:funders, isLoading, error } = useApiQuery({
       <div className="w-full overflow-hidden">
         <Marquee gradient={false} speed={40}>
           {funders?.data?.map((brand, index) => (
-            <div
+            <a target="_blank" href={brand?.link} rel="noopener noreferrer"
+
               key={index}
-              className="mx-10 sm:mx-16 md:mx-20 lg:mx-24 flex items-center justify-center"
+              className="mx-10 sm:mx-16 md:mx-20 lg:mx-24 flex items-center justify-center cursor-pointer"
             >
+              {console.log(brand)}
               <img
                 src={brand?.image}
                 alt={`brand-${index}`}
                 className="w-[140px] h-[80px] sm:w-[160px] sm:h-[90px] md:w-[180px] md:h-[100px] object-contain"
               />
-            </div>
+            </a>
           ))}
         </Marquee>
       </div>

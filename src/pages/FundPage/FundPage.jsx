@@ -18,6 +18,7 @@ import image12 from "@/assets/images/b12.png";
 import image13 from "@/assets/images/b13.jpg";
 import FindPlan from "@/components/HomeComponent/FindPlan";
 import {useApiQuery} from "@/hooks/allCMS";
+import { Link } from "react-router-dom";
 
 const FundPage = () => {
 const { data:funders, isLoading, error } = useApiQuery({
@@ -159,7 +160,7 @@ const { data:funders, isLoading, error } = useApiQuery({
         {/* Brand Grid */}
         <div className="mt-10 sm:mt-12 md:mt-16 grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 place-items-center">
           {funders?.data?.map((brand) => (
-            <div
+           <a target="_blank" href={brand.link} rel="noopener noreferrer"
               key={brand.id}
               className="relative flex flex-col items-center text-center"
               onMouseEnter={() => handleBrandHover(brand)}
@@ -205,7 +206,7 @@ const { data:funders, isLoading, error } = useApiQuery({
                   </div>
                 </motion.div>
               )}
-            </div>
+            </a>
           ))}
         </div>
 

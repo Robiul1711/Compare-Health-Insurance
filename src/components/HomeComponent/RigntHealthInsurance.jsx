@@ -7,6 +7,7 @@ import img3 from "../../assets/images/img3.png";
 import img4 from "../../assets/images/img4.png";
 import CommonButton from "../common/CommonButton";
 import gsap from "gsap";
+import { useApiQuery } from "@/hooks/allCMS";
 
 const insurancePlans = [
   {
@@ -36,6 +37,12 @@ const insurancePlans = [
 ];
 
 const RigntHealthInsurance = () => {
+    const { data:findHealth, isLoading, error } = useApiQuery({
+      queryKey: "find-health",
+      url: "/find-health",
+      
+    });
+    console.log(findHealth?.data)
   const sectionRef = useRef(null);
   const headerRef = useRef(null);
   const dividerRef = useRef(null);
@@ -110,7 +117,7 @@ const RigntHealthInsurance = () => {
 
       {/* Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {insurancePlans.map((plan, index) => (
+        {findHealth?.data?.map((plan, index) => (
           <div
             key={plan.id}
             ref={(el) => (cardsRef.current[index] = el)}
@@ -120,7 +127,7 @@ const RigntHealthInsurance = () => {
               <div>
                 <Title level="title32">{plan.title}</Title>
                 <Title level="title20" className="text-Secondary">
-                  {plan.subtitle}
+                  {plan.link}
                 </Title>
               </div>
               <CommonButton link={'/compare-health-insurance'} variant="primary">

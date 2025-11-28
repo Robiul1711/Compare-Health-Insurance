@@ -6,7 +6,10 @@ import banner from "../../assets/images/banner.png";
 import stars from "../../assets/images/stars.png";
 import gsap from "gsap";
 
-const Banner = () => {
+
+const Banner = ({homePageData}) => {
+
+  console.log(homePageData?.data);
   const badgeRef = useRef(null);
   const mainTitleRef = useRef(null);
   const subtitleRef = useRef(null);
@@ -64,7 +67,7 @@ const Banner = () => {
         level="title64"
         className="leading-tight max-w-[900px] mx-auto"
       >
-        Compare Health Insurance Plans Easily
+        {homePageData?.data?.homepage_header_txt}
       </Title>
 
       <Title
@@ -72,7 +75,7 @@ const Banner = () => {
         level="title20"
         className="text-Secondary leading-relaxed"
       >
-        Get the best deal for you — free comparison, expert advice, and no hidden fees.
+        {homePageData?.data?.description}
       </Title>
 
       {/* Action Buttons */}
@@ -80,15 +83,18 @@ const Banner = () => {
         ref={buttonsRef}
         className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:mt-4"
       >
-        <CommonButton variant="primary" className="flex items-center gap-2">
+        <CommonButton
+          variant="primary"
+          className="flex items-center gap-2"
+          onClick={() =>
+            (window.location.href = `tel:${homePageData?.data?.call_number}`)
+          }
+        >
           <IoCallOutline className="text-lg" />
           Call Now
         </CommonButton>
 
-        <CommonButton
-          link="/compare-health-insurance"
-          variant="secondary"
-        >
+        <CommonButton link="/compare-health-insurance" variant="secondary">
           Get Your Free Comparison
         </CommonButton>
       </div>
@@ -96,7 +102,7 @@ const Banner = () => {
       {/* Image */}
       <img
         ref={imageRef}
-        src={banner}
+        src={homePageData?.data?.testimonmial_image || banner}
         alt="banner"
         className="mt-5 sm:mt-10 rounded-3xl"
       />

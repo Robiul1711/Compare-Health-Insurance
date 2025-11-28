@@ -122,7 +122,7 @@ defaultValues: {
                 </button>
               )}
 
-              {current < steps.length - 1 ? (
+              {current < steps.length - 2 ? (
                 <button
                   type="button"
                   onClick={next}

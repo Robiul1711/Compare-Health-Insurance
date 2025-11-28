@@ -11,6 +11,7 @@ export default function HowWeWork() {
     queryKey: "howWork",
     url: "/weworks/get",
   });
+  console.log(howWork)
   const steps = [
     {
       icon: work1,
@@ -57,7 +58,7 @@ export default function HowWeWork() {
               </h3>
 
               <p className="text-sm sm:text-base md:text-lg text-Secondary leading-relaxed">
-                {step.description}
+                {step.sub_title}
               </p>
             </div>
           ))}

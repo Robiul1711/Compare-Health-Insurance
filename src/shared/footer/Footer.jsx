@@ -31,6 +31,12 @@ const Footer = ({ data }) => {
     queryKey: "social-links",
     url: "/social-links/get",
   });
+
+    const { data: homePageData} = useApiQuery({
+    queryKey: "homepage-settings",
+    url: "/homepage-settings",
+  });
+
   return (
     <footer className="section-padding-x py-5 sm:py-6 lg:py-8 xl:py-10">
       <div className="flex flex-col md:flex-row justify-between w-full gap-10">
@@ -201,12 +207,12 @@ const Footer = ({ data }) => {
               <ul className="space-y-3  text-sm md:text-base ">
                 <li className="flex items-center gap-2 ">
                   <Phone className="size-4" />
-                  <span>{"0478 711 733"}</span>
+                  <span>{homePageData?.data?.phone}</span>
                 </li>
                 <li className="flex items-center gap-1 ">
                   <Mail className="size-5" />
                   <span>
-                    {data?.system_settings?.email || "info@comparesure.com.au"}
+                    {homePageData?.data?.email || "info@comparesure.com.au"}
                   </span>
                 </li>
 
