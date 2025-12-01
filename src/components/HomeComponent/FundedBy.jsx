@@ -27,7 +27,14 @@ const { data:funders, isLoading, error } = useApiQuery({
   url: "/partners/get",
   
 });
-
+    const {
+      data: disclaimer,
+  
+    } = useApiQuery({
+      queryKey: "disclaimer",
+      url: "/dynamic-page/HomePage-Disclaimer-One",
+    });
+ 
   // const brands = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13];
 
   return (
@@ -65,20 +72,8 @@ const { data:funders, isLoading, error } = useApiQuery({
         View all {funders?.data?.length} health funds we compare
       </Link>
       <div className=" sm:bg-Primary/10 rounded-2xl sm:p-6 sm:py-10  sm:shadow-sm sm:border sm:border-gray-100">
-        <h3 className="text-sm sm:text-base leading-relaxed text-gray-700 font-medium ">
-          <span className="block text-Secondary font-semibold text-lg lg:text-xl xl:text-2xl mb-2">
-            Disclaimer
-          </span>
-          CompareSure operates as a white-label partner of
-          <span className="font-semibold text-Primary">
-            {" "}
-            ItsMyGroup Pty Ltd (ABN 85 167 289 965)
-          </span>
-          . The relationships with participating health funds are held directly
-          by ItsMyGroup, which administers and maintains all fund agreements.
-          CompareSure utilises ItsMyGroup's platform and services under this
-          arrangement to provide health insurance comparison and advice to
-          customers.
+        <h3 className="text-sm sm:text-base leading-relaxed text-gray-700 font-medium " dangerouslySetInnerHTML={{__html: disclaimer?.data?.page_content}}>
+         
         </h3>
       </div>
       <h1 className="text-Secondary font-semibold text-lg lg:text-xl xl:text-2xl mb-2">
