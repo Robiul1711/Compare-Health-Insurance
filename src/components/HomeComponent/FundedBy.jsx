@@ -1,26 +1,11 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
-import Title from "../common/Title";
-
-// Images
-import image1 from "@/assets/images/b1.png";
-import image2 from "@/assets/images/b2.png";
-import image3 from "@/assets/images/b3.png";
-import image4 from "@/assets/images/b4.png";
-import image5 from "@/assets/images/b5.png";
-import image6 from "@/assets/images/b6.png";
-import image7 from "@/assets/images/b7.png";
-import image8 from "@/assets/images/b8.png";
-import image9 from "@/assets/images/b9.png";
-import image10 from "@/assets/images/b10.png";
-import image11 from "@/assets/images/b11.png";
-import image12 from "@/assets/images/b12.png";
-import image13 from "@/assets/images/b13.jpg";
 import { Link } from "react-router-dom";
 import {useApiQuery} from "@/hooks/allCMS";
 
 
-const FundedBy = () => {
+const FundedBy = ({homePageData}) => {
+  // console.log(homePageData?.data?.home_hero_compare)
 // const { funders, isLoading, error } = funderQuery();
 const { data:funders, isLoading, error } = useApiQuery({
   queryKey: "funders",
@@ -76,10 +61,8 @@ const { data:funders, isLoading, error } = useApiQuery({
          
         </h3>
       </div>
-      <h1 className="text-Secondary font-semibold text-lg lg:text-xl xl:text-2xl mb-2">
-        {" "}
-        We do not compare all health funds. We compare select policies from IMG
-        partnered funds.
+      <h1 className="text-Secondary font-semibold text-lg lg:text-xl xl:text-2xl mb-2" dangerouslySetInnerHTML={{__html:homePageData?.data?.home_hero_compare}}>
+       
       </h1>
     </section>
   );

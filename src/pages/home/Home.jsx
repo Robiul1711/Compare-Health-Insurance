@@ -22,7 +22,7 @@ const Home = () => {
     <div>
     <div className='section-padding-x space-y-8 xs:space-y-12 sm:space-y-16 md:space-y-20 lg:space-y-24'>
       <Banner  homePageData={homePageData}/>
-      <FundedBy />
+      <FundedBy homePageData={homePageData} />
       <RigntHealthInsurance />
       <MindMatters />
       <TestimonialSlider />
